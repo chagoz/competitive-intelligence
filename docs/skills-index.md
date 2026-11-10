@@ -12,7 +12,7 @@ All five are built as skills. Two of them, the Weekly Digest and the Monthly Rea
  
 **Two skills now run as two runs in one conversation**, a research pass that stops at the gate and a later write pass in the same thread. The weekly digest and the monthly reality check both work this way. The split exists because a writing rule read hours before it is applied is a rule that gets dropped, so Phase 2 re-reads the writing layer next to the work it governs and states each file's version before drafting.
  
-**No skill hardcodes a Notion page ID, HubSpot field name, or Slack channel.** Every live Notion page or database is found by searching for its title and confirmed once. This is what makes the skills portable across Notion connections; hardcoded IDs from one workspace are meaningless in another.
+**No skill hardcodes a Notion page ID, CRM field name, or Slack channel.** Every live Notion page or database is found by searching for its title and confirmed once. This is what makes the skills portable across Notion connections; hardcoded IDs from one workspace are meaningless in another.
  
 **No skill configures itself.** Project knowledge is read-only at runtime, so a skill cannot write a confirmed value back into `configuration.md`. It reports the delta and asks for the file to be updated by hand. The human is the only writer, deliberately, so a configuration change is always visible.
  
@@ -49,7 +49,7 @@ anything found at the user path for these five is a snapshot rather than the sou
 **Trigger:** "run monthly reality check", "run reality check for [month]"
 **Mode:** two runs in one conversation, research then write, on the cadence in `configuration.md`, covering the previous calendar month, plus ad hoc.
 **Human gate:** required, on the top 3 key learnings selection, closing only on a restatement the user agrees to.
-**Reads:** `about-us.md`, including the Product direction the bets pillar measures against, `analysis-rules.md`, `evidence-registry.md` for source types, `monthly-review-template.md`, `language-guidelines.md` Parts 1 and 3, `configuration.md`, the Evidence Registry database, the Competitor Profiles database, the Competitor Employee List, HubSpot lost-deal data.
+**Reads:** `about-us.md`, including the Product direction the bets pillar measures against, `analysis-rules.md`, `evidence-registry.md` for source types, `monthly-review-template.md`, `language-guidelines.md` Parts 1 and 3, `configuration.md`, the Evidence Registry database, the Competitor Profiles database, the Competitor Employee List, CRM lost-deal data.
 **Writes:** every affected Competitor Profiles entry, immediately, all tiers, per the all-tier rule in §7 and the always-true rule in §9. Then, once the top 3 are selected, **one monthly page** holding the review, the market lens and the working record in a toggle. Then 3 Slack post options for the review and a tracker row.
  
 *One page per month, not a pair of sibling pages. The Theme Watch activity matrix and the lost-deal table are sections inside the working record toggle, not separate documents.*
