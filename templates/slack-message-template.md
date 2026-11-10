@@ -24,9 +24,9 @@ The title, three-point structure, and link are always identical in shape. The cl
 
 Each bullet = what they did + what it means for us, in one sentence. Second part maximum four words.
 
-Good: "[Competitor A] claimed our AI positioning. They published first. We haven't."
-Good: "[Competitor B] is now a data layer, not just a rating. Different game entirely."
-Bad: "[Competitor B] published new methodology documentation this week." (fact only, no implication, this is what drives low engagement)
+Good: "IntegrityNext claimed our AI positioning. They published first. We haven't."
+Good: "EcoVadis is now a data layer, not just a rating. Different game entirely."
+Bad: "EcoVadis published new methodology documentation this week." (fact only, no implication, this is what drives low engagement)
 
 ## Closing line, contextual, not formulaic
 
@@ -39,6 +39,18 @@ Three registers to rotate between, chosen based on what fits the week, never use
 **Absurdist**, low-key chaotic, very human.
 
 Avoid repeating the same register two weeks in a row, readers notice.
+
+## 🌟 What's for us (optional)
+
+This line is off by default. It appears only when the user turns it on in their settings. When it is on, it helps an action move from research into the company, and it has one shape:
+
+[verb] [action] ([team]), because [signal from this edition].
+
+1. The action, opening with a verb, concrete enough to start today.
+2. The owning team, in brackets, taken from the team list in the company's about-us file. Never a person.
+3. The proof, after "because": the signal from this edition that justifies the action.
+
+One action only. The action is taken from the edition's opportunities section, and the human confirms it at the gate.
 
 ## Copy rules
 
@@ -53,5 +65,6 @@ Track total reactions with emoji breakdown, thread reply count, and Notion view 
 
 ---
 
-*[Your name] x Claude · September 13, 2026 · v2*
+*v3*
+*v3 changes: the optional 🌟 What's for us line added, off by default and set by the user. Its shape and its single-action rule follow the decision recorded on the product board.*
 *v2 changes: the fixed-structure example itself used an em dash, two sections above this file's own no-em-dash rule. Corrected, and the title format brought in line with the comma convention used everywhere else since. Version stamp added, this file had none and had gone untouched since August 13, the oldest of the reference files by three weeks.*

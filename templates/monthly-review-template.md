@@ -147,6 +147,6 @@ Everything in the `language-guidelines.md` Part 1 checklist, plus:
 
 ---
 
-*[Your name] x Claude · September 13, 2026 · v1.1*
+*v1.1*
 *v1.1 changes: header stamp removed, this file carried a "Created" date at the top and a full version stamp in the footer, identified during the September rework review as the same drift the one-stamp rule exists to prevent.*
 *v1: first written definition. The review had existed as a Notion page since August 2026 with no mirror in Project knowledge, and the Theme Watch matrix had no definition anywhere at all, existing only as produced output inside a working record. Drafted against the real August 2026 edition rather than from scratch, so the shape that already worked is preserved. Two sections are genuinely new: the market lens, and the working record as a toggle rather than a sibling page.*

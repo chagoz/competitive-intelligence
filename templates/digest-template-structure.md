@@ -62,6 +62,6 @@ If findings consolidate around one topic with direct business consequences, this
 
 ---
 
-*[Your name] x Claude · September 13, 2026 · v3*
+*v3*
 *v3 changes: added a note on where Topic 3 and 4 findings land, since `watch-list.md` grew to four topics after this document was last touched and only two of them had a named section. "Reality Check output" corrected to "the monthly page," the older document type this file hadn't caught up to. Header stamp removed, this file carried both a header and a footer stamp, the exact drift the one-stamp rule was written to stop.*
 *v2 changes: emoji headers specified per section, which they previously were not in this document. Inline markers written in as mandatory. Section names fixed to one canonical form each after digest #9 drifted on two of them.*
