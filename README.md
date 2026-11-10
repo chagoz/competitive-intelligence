@@ -26,7 +26,7 @@ Four layers, each answering a different question:
 | `about-us.md` | Your category, value drivers, theme watches, ICPs, buyer archetypes, product direction, loss patterns, positioning vocabulary, regulation coverage status, who reads your outputs and what each reader needs, the lens every competitor signal gets judged through |
 | `competitor-list.md` | Your Tier 1-5 competitor list, plus a corrections log |
 | `watch-list.md` | The topic areas you actively monitor |
-| `configuration.md` | Workspace-specific values (Notion titles, Slack channel, HubSpot fields, scheduled tasks), filled in during setup |
+| `configuration.md` | Workspace-specific values (Notion titles, Slack channel, CRM lost-deal fields, scheduled tasks), filled in during setup |
 
 ### `rules/`
 | File | What it holds |
@@ -47,11 +47,15 @@ Four layers, each answering a different question:
 ### `docs/`
 | File | What it holds |
 |---|---|
+| `setup-guide.md` | Step-by-step install: create the Project, upload the files, add the skills, first run, and troubleshooting |
 | `skills-index.md` | What each of the five skills does, reads, and writes |
+| `settings.md` | Every operator setting, its default, and which file owns it |
 | `rework-method-sept-2026.md` | A worked example of reworking this kind of system properly: what got tried and reversed, four real errors and their one shared cause, and the rules that came out of doing the work rather than planning it. Not required reading to use the system, genuinely useful if you're about to rework your own copy |
 
 ### `skills/`
 Five Claude Skills, one folder per skill, each containing a `SKILL.md`. To install one, zip the folder itself (so the zip contains `SKILL.md` at its root) and upload it in Claude's Settings.
+
+Two cadence skills ship a small shape-check script beside their `SKILL.md` (`weekly-digest/digest_check.py`, `monthly-reality-check/monthly_check.py`). Each checks that an output has the required sections and teams before it is posted; it checks shape, not whether the content is right.
 
 ## Who owns what
 
@@ -101,11 +105,7 @@ Every skill and every document refers to Notion pages and databases by title, ne
 
 ## Getting started
 
-No standalone setup guide is included in this package, this section is the walkthrough.
-
-Create a Claude Project. Upload the reference files from `your-workspace/`, `rules/`, `templates/`, and `docs/skills-index.md` (Claude's Project knowledge is flat, folders don't carry over, grab each file regardless of which folder it sits in here). Zip and upload each folder in `skills/` under Settings. Add custom instructions telling Claude these files are the current source of truth for any competitive intelligence task, and to read `configuration.md` before touching Notion, Slack, or your CRM, never from memory.
-
-Then run "set up competitive intelligence system." The `ci-system-setup` skill runs two phases. **Phase 1** asks who your company is, your competitors by tier, your watch list topics, and your voice, only if `about-us.md`, `competitor-list.md`, and `watch-list.md` don't already have real content, skipped automatically otherwise. **Phase 2** checks for six Notion items (the home page, and five databases including Digest Actions), shows you the proposed shape for anything missing, and builds it once you confirm. Phase 2 is safe to re-run any time, Phase 1 only runs once.
+Full step-by-step install lives in [`docs/setup-guide.md`](docs/setup-guide.md): create a Claude Project, upload the reference files, add the skills, and run the setup flow. In brief, the `ci-system-setup` skill runs two phases. **Phase 1** captures who your company is, your competitors, your watch list and your voice, and only runs once. **Phase 2** builds the Notion structure and is safe to re-run any time.
 
 ![Setup in fast-forward: fork the template, answer the setup questions, get the Notion hub](docs/media/groundline-setup.gif)
 
@@ -125,4 +125,4 @@ If you find company-specific content in any other file, that's a defect in this 
 
 ---
 
-*[Your name] x Claude*
+Built by [@chagoz](https://github.com/chagoz). Questions or issues? [Open an issue](../../issues).
