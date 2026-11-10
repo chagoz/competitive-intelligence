@@ -25,9 +25,20 @@ Two craft rules follow from having more than one reader group, and they are gene
 The Slack post is not a teaser. It delivers the core message on its own, efficiently, so someone with thirty seconds gets the actual point of the week, not just curiosity about it. The linked document goes deeper, proof, nuance, full picture, it does not hold the headline hostage to earn a click.
 
 Bad: "Big week for competitors. More inside."
-Good: "[Competitor A]'s own users just handed us two sales talking points. Read more →"
+Good: "IntegrityNext's own users just handed us two sales talking points. Read more →"
 
 No manufactured suspense. Short, driven, self-contained.
+
+---
+
+### Sentence shape
+
+Separate from tone: this rule governs how a line is built, whatever the voice. A short line must still read as a sentence a person would say. Cutting words until only nouns and labels remain makes a line shorter and harder to understand. When text has to be short, keep the subject and the verb, say what it means for us first, and move the detail elsewhere.
+
+Bad: "Pricing. Aggressive: three tiers, a free trial, annual discount."
+Good: "Pricing is aggressive. They offer three tiers, a free trial and an annual discount."
+
+System labels and tags travel as chips next to the text, never as the words of the text.
 
 ---
 
@@ -124,7 +135,7 @@ Run before writing any Notion content, no exceptions:
 
 If any item is unchecked, the document is not finished.
 
-### Four colour registers
+### Colour registers
 
 | Colour | Meaning | Used on |
 |---|---|---|
@@ -132,6 +143,8 @@ If any item is unchecked, the document is not finished.
 | Blue inline text | OKR signal inside a callout | OKR tags inside blue callouts |
 | Grey inline text | Low urgency / meta | Subtitles, quiet sections, legends |
 | Yellow highlight | New signal, flag for attention | Key sentence, unverified flags |
+| Red callout, 🚩 | A decision waiting on a human | Open tier, threat or baseline decisions on a profile |
+| Grey callout, ✅ | A decision that is closed and past | Closed decisions on a profile, kept one cycle |
 
 ### Visual language legend rule
 
@@ -156,8 +169,8 @@ Good: "A March 2026 G2 review flagged setup speed. No newer reviews raise it."
 
 Every claim tagged Self-declared (competitor's own words) or Independent, verified (third party, no incentive to favour them), dated, linked when available. Full rule: `analysis-rules.md` §2.2.
 
-Bad: "[Competitor A] delivers 180% ROI."
-Good: Self-declared, [Competitor A] website, citing an unlocated third-party study: "180% ROI, 8-month breakeven."
+Bad: "IntegrityNext delivers 180% ROI."
+Good: Self-declared, IntegrityNext website, citing an unlocated Verdantix study: "180% ROI, 8-month breakeven."
 
 ### Words to avoid
 
@@ -205,7 +218,7 @@ Always displayed together with both markers, never collapsed into one number.
 
 Direct, fast, built for a Slack-speed read. Event and source first, "so what for us" last. This is an internal working document, the reader wants the point fast, not softened.
 
-Example: "[Competitor A] launched a Help Center. So what for us: continuous visibility should already be part of our sales conversation."
+Example: "IntegrityNext launched a Help Center. So what for us: continuous visibility should already be part of our sales conversation."
 
 One idea per sentence. No compound sentences. Split at commas connecting independent thoughts.
 
@@ -216,7 +229,7 @@ Short is the default. 100 words max per competitor section on a quiet week. Long
 Enrichment, not repetition. References and acts on reality check findings, does not re-explain them at the same depth.
 
 Bad: restating the full gap story at reality-check depth inside the digest.
-Good: "[Competitor A]'s two user-confirmed gaps (see the August monthly page) are worth surfacing in sales conversations this week."
+Good: "IntegrityNext's two user-confirmed gaps (see the August monthly page) are worth surfacing in sales conversations this week."
 
 ### Section emojis
 
@@ -266,14 +279,14 @@ When findings consolidate around one topic with direct business consequences, th
 
 The reader is Product, Sales, or C-level. The goal is to nurture a decision, not hand one down. No imperative verbs opening an item (Investigate, Decide, Confirm, Publish). Open with what was observed, let the implication sit there rather than stating the conclusion for the reader.
 
-Bad: "Investigate the Buyer A and Buyer B feedback as a product signal, not a messaging problem."
-Good: "Two buyers, two deals, the same doubt. Buyer A and Buyer B independently raised versions of the same concern this quarter, one on effort reduction, one on methodology reliability, both claims we lead with."
+Bad: "Investigate the Lindab and AXA feedback as a product signal, not a messaging problem."
+Good: "Two buyers, two deals, the same doubt. Lindab and AXA independently raised versions of the same concern this quarter, one on effort reduction, one on methodology reliability, both claims we lead with."
 
 ### Structure, reversed from the Digest
 
 Impact first, proof at the close. Shape: impact statement, one or two sentences of context, then a proof line, source-honesty tagged, dated and linked.
 
-Bad: leading with the event ("[Competitor A] hired a Chief Strategy and Innovation Officer") and ending with why it matters.
+Bad: leading with the event ("IntegrityNext hired a Chief Strategy and Innovation Officer") and ending with why it matters.
 Good: leading with the implication ("Two competitors are quietly repositioning above us") and closing with the named hire and date as the proof.
 
 ### Altitude rule
@@ -300,7 +313,8 @@ Numbered, divider between each item. Team code-tag kept, decoupled from any dire
 
 ---
 
-*[Your name] x Claude · September 4, 2026 · v5*
+*v6*
+*v6 changes: Part 1 gains Sentence shape, kept separate from tone, after the compressed-line rule. Colour registers gain the red open-decision and grey closed-decision callouts, following profile template v8.*
 *v5 changes: the audience pool moved out to About Us, since our readership is self-knowledge and a fork has different readers; the two craft rules that follow from having several readers stay here. 🌐 added for the market lens, after an edition borrowed the high-threat marker as a section header, with an explicit rule against reusing inline markers in headings. Corporate events exemption added to the inline marker list. Words to avoid and AI language now state that positioning-bearing vocabulary lives in About Us. Part 3 retitled from Quarterly Review to the monthly page and pointed at its template.*
 *v4 changes: certainty chips added to the inline-markers table.*
 *v3 changes: the emoji system moved from Part 2 to Part 1 so it governs every document type, and inline markers made an explicit mandatory pre-flight item.*

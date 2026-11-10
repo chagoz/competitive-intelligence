@@ -120,6 +120,6 @@ unreadable. Use dividers and bold paragraph titles for structure below H2.
 
 ---
 
-*[Your name] x Claude · August 18, 2026 · v3*
-*v2: strategy brief added as a standing section after reader feedback.*
+*v3*
+*v2: strategy brief added as a standing section after reader feedback from Disa.*
 *v3: emoji headers specified per section, which they were not in v1 or v2, and inline markers written in as a mandatory list. The original omission is why the first edition improvised its own symbols.*

@@ -1,6 +1,6 @@
 ---
 name: monthly-reality-check
-description: "Runs your company's monthly competitive reality check across two runs in one conversation: a research pass that verifies competitor claims against Layer 2 evidence on every profile at every tier, pulls the previous month's HubSpot lost-deal data and stops at the user's gate, and a later write pass that produces the monthly page and 3 Slack post options. Trigger phrases: 'run monthly reality check', 'run reality check for [month]'. The research pass runs as a scheduled task on the cadence recorded in configuration.md, and ad hoc when triggered."
+description: "Runs the company's monthly competitive reality check across two runs in one conversation: a research pass that verifies competitor claims against Layer 2 evidence on every profile at every tier, pulls the previous month's lost-deal data from the configured source and stops at the operator's gate, and a later write pass that produces the monthly page and 3 Slack post options. Trigger phrases: 'run monthly reality check', 'run reality check for [month]'. The research pass runs as a scheduled task on the cadence recorded in configuration.md, and ad hoc when triggered."
 ---
 
 # Monthly Reality Check
@@ -14,9 +14,9 @@ Route before reading anything else.
 - **Anything else, including any case not clearly one of the above:** treat it as still at the gate and ask. Ambiguity never resolves toward writing.
 - Neither state exists at all: this is a **research run**. Go to Phase 1.
 
-**Cadence lives in `configuration.md`, not here.** The research pass fires as a scheduled task and stops at the gate. The user returns to the same conversation to confirm the top three, and the write run happens in the same thread.
+**Cadence lives in `configuration.md`, not here.** The research pass fires as a scheduled task and stops at the gate. The operator returns to the same conversation to confirm the top three, and the write run happens in the same thread.
 
-**If `configuration.md` records a cadence that does not match how this run was triggered**, say so in the first line of the run and ask the user to update the file. No skill configures itself.
+**If `configuration.md` records a cadence that does not match how this run was triggered**, say so in the first line of the run and ask the operator to update the file. No skill configures itself.
 
 **If the earlier conversation is gone**, do not scan cold. The profile writes made under §9 during the research run are the permanent record of what was found; rebuild the candidate set from them. State in one line that this is what happened.
 
@@ -34,15 +34,15 @@ Route before reading anything else.
 - `analysis-rules.md`: §2 research schema, §2.1 recency filter and the window, §2.2 source honesty, §2.2.1 the absence bar, §2.5 corporate events, §2.6 the market lens, §2.8 the bets pillar, §2.9 archetype frictions, §7 the all-tier rule, §8 lost deal method, §9 the always-true rule
 - `evidence-registry.md` for source types, priorities and cadences. **Addresses are not in this file.** They live in the Evidence Registry database
 - `watch-list.md`, for the topic questions
-- `configuration.md` for the Competitor Profiles database, the Evidence Registry database, the Competitor Employee List database, the Slack channel and the HubSpot field names
+- `configuration.md` for the Competitor Profiles database, the Evidence Registry database, the Competitor Employee List database, the Slack channel and the CRM lost-deal field names
 
 **Do not read the writing files in this phase.** `monthly-review-template.md` and `language-guidelines.md` Part 3 are read in Phase 2, next to the work they govern.
 
-**If a configuration value is missing, unconfirmed, or does not match the workspace:** search Notion by the name given in the file, show what you found, and ask the user to confirm before writing anything. **Do not attempt to write to `configuration.md`.** Report the delta and ask the user to update it by hand.
+**If a configuration value is missing, unconfirmed, or does not match the workspace:** search Notion by the name given in the file, show what you found, and ask the operator to confirm before writing anything. **Do not attempt to write to `configuration.md`.** Report the delta and ask the operator to update it by hand.
 
 If any edit fails with "can't edit page on block with an archived ancestor," stop and flag it. Do not silently write elsewhere. This usually means the database title matched more than one page and the wrong one got confirmed.
 
-If HubSpot fields are not set, skip the lost-deal pull entirely and say so explicitly in the output. Never fail the whole run over a missing pull.
+If no lost-deal source is connected (§8) or the lost-deal fields are not set, skip the lost-deal pull entirely and say so explicitly in the output. Never fail the whole run over a missing pull.
 
 ### Step 1, set the period and name the blind spot
 
@@ -86,21 +86,21 @@ Each buyer archetype in `about-us.md` carries a key friction evidenced from real
 
 **Corporate events, §2.5.** Funding, acquisition, partnership, integration, senior hire, ownership change and positioning changes are captured on the profile's Signal history table, typed, with an empty Grade. The recency filter applies to the reporting of an event, not to the event itself, so an older event is legitimate standing evidence with its own date.
 
-**Bets, §2.8.** Where a competitor made a move that shows direction, record a bets reading on the profile: evidence class, conviction, and distance from us measured against the directions and non-goals in `about-us.md`. All three tags or the bet is excluded rather than shown partial. Where our own direction is silent, log the silence for Product rather than guessing. A bet landing on one of Product's open questions is flagged, not scored. **An excluded bet is recorded as excluded**, because a competitor whose direction cannot be evidenced is a finding about that competitor.
+**Bets, §2.8.** Where a competitor made a move that shows direction, record a bets reading on the profile. Bets reading shows on top-tier profiles by default, and a user setting extends it to all tiers: evidence class, conviction, and distance from us measured against the directions and non-goals in `about-us.md`. All three tags or the bet is excluded rather than shown partial. Where our own direction is silent, log the silence for Product rather than guessing. A bet landing on one of Product's open questions is flagged, not scored. **An excluded bet is recorded as excluded**, because a competitor whose direction cannot be evidenced is a finding about that competitor.
 
 ### Step 7, the rest of the research pass
 
 **Employee scan.** Light scan of tracked employees' recent posts, dated within the cycle only. No rescoring; that is the six-month cadence in §5.
 
-**HubSpot lost-deal pull.** Structured and free-text loss-reason fields named in `configuration.md`. Query both meetings and calls objects for the period and sum them, dedup scheduling-tool pairs by datetime and title. Zero entries excluded, Unknown column always present. **Unattributed losses are not discarded**; they are read as buyer behaviour and feed the market lens.
+**Lost-deal pull.** Structured and free-text loss-reason fields named in `configuration.md`. It runs only when a lost-deal source is connected (§8). Query both meetings and calls objects for the period and sum them, dedup scheduling-tool pairs by datetime and title. Zero entries excluded, Unknown column always present. **Unattributed losses are not discarded**; they are read as buyer behaviour and feed the market lens.
 
 **The market lens, §2.6.** A reading pass over evidence already collected, never its own scan. Four inputs: Tier 5 platforms and where their offer intersects ours, regulatory movement itself, unattributed losses read as buyer behaviour, and prospect-named companies we do not track.
 
 Build the Theme Watch activity matrix in two blocks that never merge. Block one, our theme watches in the order `about-us.md` lists them. Block two, observed in the market, not ours, labelled as such. No promotion rule. The since-last-cycle column is read off the previous edition; nothing new is stored.
 
-### Step 8, profile writes, per §9. Before the gate, not after.
+### Step 8, profile writes, through the write plan (§9)
 
-Every discovery updates the relevant Competitor Profiles entry immediately, in this same session, before and independently of the gate:
+Every discovery is one line in the write plan (§9), run at the end of this research pass, before and independently of the gate:
 
 - The changelog at the top, with what changed and when
 - The relevant evidence table row, not only a new Signal history line
@@ -110,13 +110,13 @@ Every discovery updates the relevant Competitor Profiles entry immediately, in t
 - The Talk/Implement property, if the evidence changes the picture
 - Last updated
 
-Property names are Talk/Implement and Threat score. **Threat scores are proposed, never set.** Record a proposed change in the Tier rationale and leave the property unchanged until the user decides.
+Property names are Talk/Implement and Threat score. **Threat scores are proposed, never set.** Record a proposed change in the Tier rationale and leave the property unchanged until the operator decides.
 
-**These writes are the fallback if the conversation is lost**, which is why they happen before the gate rather than after it.
+**The plan runs before the gate.** If the conversation is lost after this point, the profiles already hold the findings, and a fresh research pass recovers the sheet.
 
 ### Step 9, the candidate sheet and the gate protocol
 
-**This phase exists so the user chooses. It is never abbreviated, never pre-decided, and never replaced by a finished selection.**
+**This phase exists so the operator chooses. It is never abbreviated, never pre-decided, and never replaced by a finished selection.**
 
 Open with the period and blind-spot line from Step 1. Then five key learning candidates, each with exactly six fields, nothing else:
 
@@ -141,10 +141,10 @@ Then three short blocks, each present even when empty:
 
 **The gate protocol.** Present the sheet and wait.
 
-**The gate closes on one condition only: the skill has restated exactly three learnings, and the user has agreed to that restatement.** Nothing else counts as confirmation.
+**The gate closes on one condition only: the skill has restated exactly three learnings, and the operator has agreed to that restatement.** Nothing else counts as confirmation.
 
 - **Partial agreement** ("the first two are good"): still at the gate. Restate the full three with the settled two fixed and the third named as open, then ask the single question that resolves it.
-- **Modification** ("swap the third for the ownership-change finding"): apply it, restate the resulting three, and treat a plain yes as confirmation. Do not return to research.
+- **Modification** ("swap the third for the Sedex ownership finding"): apply it, restate the resulting three, and treat a plain yes as confirmation. Do not return to research.
 - **Silence or an unrelated reply**: still at the gate.
 - **Anything unclear**: still at the gate. Ask. Never read ambiguity as confirmation.
 
@@ -162,7 +162,7 @@ Do not write the monthly page. Do not draft Slack options. Not in any permission
 
 Open the write run by restating the three confirmed learnings, in one line each, exactly as agreed.
 
-This is the mis-route check. If the routing read the conversation wrongly, or a modification was applied that the user did not intend, it is visible now, before a page exists.
+This is the mis-route check. If the routing read the conversation wrongly, or a modification was applied that the operator did not intend, it is visible now, before a page exists.
 
 ### Step 2, re-read the writing layer. Blocking.
 
@@ -207,22 +207,50 @@ If there is not enough reality check history for a genuine time comparison, do n
 
 ---
 
-## What this skill does not do
+## Gotchas
 
-- Does not select the top 3 key learnings itself, and does not present a pre-selected set for approval.
-- Does not rank candidates editorially, or mark one as recommended.
-- Does not carry method inline. Window, absence bar, scoring, bets, frictions and gate rules live in `analysis-rules.md` and are referenced, never restated.
-- Does not restate the length of a list another file owns. The topic count lives in `watch-list.md`.
-- Does not skip the recency filter or source honesty tags to save time.
-- Does not write an absence as Confirmed without meeting §2.2.1.
-- Does not publish a partial bet, and does not omit an excluded one.
-- Does not set a threat score. It proposes one.
-- Does not read the writing files in Phase 1, or draft in Phase 2 without re-reading them and stating their versions.
-- Does not begin a write run without restating the confirmed three.
-- Does not run the pre-flight against anything other than the final payload.
-- Does not treat a modification, a partial agreement, or any ambiguity as a closed gate.
-- Does not ask more than one question in a turn.
-- Does not treat a Tier 2 to 4 profile as out of scope.
-- Does not post to Slack directly.
-- Does not write its own configuration.
-- Does not write the monthly page before the gate, in any permission mode, including auto.
+Real failures from past runs. Each one looked reasonable at the time.
+
+- A reality check over a short history cannot show a trend. State how many periods exist, and do not stretch limited history into a trend.
+- A claim that a competitor no longer does something needs the absence bar. One failed retrieval is evidence of a failed retrieval, not of absence.
+- A bet missing one of its three tags is excluded, not shown partial.
+- A lost-deal pull with no connected source is a line that says so, never a blank table.
+- Profiles written before the gate are safe only through the write plan: one blocked line never holds the rest.
+- A chip does not replace a sentence. A bare chip line tells the reader nothing.
+
+## Check script
+
+Run the script on the page before the write. It checks shape only. PASS means the shape is complete, not that the content is right.
+
+```python
+import re, sys, argparse
+p = argparse.ArgumentParser()
+p.add_argument("file")
+p.add_argument("--teams", default="", help="team names from the about-us file, comma separated")
+p.add_argument("--sections", default="", help="section headings the page must contain, separated by |")
+a = p.parse_args()
+t = open(a.file, encoding="utf-8").read()
+err = []
+def need(ok, msg):
+    if not ok: err.append(msg)
+for i, line in enumerate(t.splitlines(), 1):
+    need(chr(8212) not in line, f"em dash on line {i}")
+for h in [x.strip() for x in a.sections.split("|") if x.strip()]:
+    need(h in t, f"section missing: {h}")
+teams = [x.strip() for x in a.teams.split(",") if x.strip()]
+for s in re.findall(r"🌟 What's for us:?\s*(.+)", t):
+    m = re.search(r"\(([^)]+)\), because", s)
+    need(m and (not teams or m.group(1) in teams), f"What's for us line needs 'Action (Team), because proof' with a team from the list: {s[:60]}")
+for line in t.splitlines():
+    if re.search(r"^\*\*Bet[^*]*\*\*", line):
+        need(all(k in line for k in ["Evidence class", "Conviction", "Distance"]), f"bet missing a tag: {line[:60]}")
+print("PASS" if not err else "FAIL\n- " + "\n- ".join(err))
+sys.exit(1 if err else 0)
+```
+
+Command: `python3 monthly_check.py page.md --teams "[team names]" --sections "[section heading]|[section heading]"`
+
+---
+
+*v3*
+*v3 changes: the research pass writes profiles through the write plan at its end, before the gate and without waiting for it. Bets reading is top tier by default and extendable by user setting. The lost-deal pull runs only when a lost-deal source is connected. Gotchas and the check script replace the do-not list.*

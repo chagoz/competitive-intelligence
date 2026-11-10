@@ -58,6 +58,7 @@ Section order, each header carrying its emoji from the Part 1 table. **Reality c
 |---|---|---|
 | 1 | What changed since the last scan | `## 🔄 Changelog since last scan` |
 | 2 | The gap between claim and evidence | `## 🤷 Reality check` |
+| 2b | Where they are going, top tier by default, extendable by user setting | `## 🗺️ Bets reading` |
 | 3 | Their claims, Layer 1 | `## 🗣️ What they claim` |
 | 4 | Verified evidence, Layer 2 | `## 🔧 What they actually do` |
 | 5 | Our documented advantage | Green or blue callout, 💚 icon, **Where we win** |
@@ -65,14 +66,17 @@ Section order, each header carrying its emoji from the Part 1 table. **Reality c
 | 7 | Dated log | `## 📈 Signal history` |
 | 8 | Open items | **Open questions**, bold heading, then grey text |
 
+**Decision callouts.** A decision that waits on a human (a tier move, a threat change, a baseline revision) appears as a callout just below the changelog. Open: red background, 🚩 icon, title and text as one block, three lines at most. Closed: grey background, ✅ icon, with the closing line "✅ Closed [date]: [decision]. [Decider]'s decision." A closed callout stays one cycle, then moves to the Working record.
+
 **Changelog.** Opens with a one-line grey italic scan-context note. Then the top 3 things that moved this cycle, each a title-pair led by its date (date, then what changed, then why). If nothing moved, carry the previous 3 forward. If important new things came in, those replace the weakest. Close with a grey italic baseline note (no new signal / threat unchanged) if applicable. This section tells a reader what is current, so it carries the most weight.
 
-**Reality check.** Each gap is an H3, with a blank line between H3s so it scans. Four elements under each header, nothing else:
+**Reality check.** Each gap is an H3, with a blank line between H3s so it scans. Four elements under each header, in this order, and nothing else:
 
 1. **One grey line naming the divergence.** One or two clauses. Not a claim paragraph and an evidence paragraph, the divergence itself. If it takes more than two clauses, the gap is not yet understood well enough to publish.
-2. **The sources, as labelled links carrying their chips.** `Self-declared` `✅ Confirmed` then the source name, linked. The chips carry origin and certainty, so the grey line never restates them in words.
-3. **The verdict**, quote block, title-pair form: bold Verdict title, br tag, one clause of consequence.
-4. Nothing else.
+2. **One thesis line**, one sentence, saying what the gap means for the reader in plain words. It gives the reasoning in brief and does not restate the sources. If it needs more than one sentence, the gap is not yet understood well enough to publish.
+3. **The sources, as labelled links carrying their chips.** `Self-declared` `✅ Confirmed` then the source name, linked. The chips carry origin and certainty, so the grey line never restates them in words.
+4. **The verdict**, quote block, title-pair form: bold Verdict title, br tag, one clause of consequence.
+5. Nothing else.
 
 **Why this is short.** Every gap already carries its evidence in the chips and the link. Restating who said it, when, and how sure we are, in prose above a line that says exactly that, is duplication that makes the section unreadable. A reader who wants the detail opens the source.
 
@@ -82,11 +86,13 @@ Section order, each header carrying its emoji from the Part 1 table. **Reality c
 
 **What they actually do.** Same table shape, Layer 2 evidence, "Older signals" toggle.
 
+**Bets reading.** Shown on top-tier profiles by default. A user setting extends it to all tiers. Each bet carries the three tags defined in `analysis-rules.md` §2.8: evidence class, conviction and distance from us. A bet missing a tag is excluded, not shown partial. Distance is named in one clause, as §2.8 requires.
+
 **Where we win.** Coloured callout (green or blue), 💚. Specific, documented advantages only, each a title-pair. Every line survives a rebuttal. Keep it coloured, it is the cheering-up moment.
 
 **Do not fight here.** Yellow callout, ⚠️. Not optional on a Tier 1 profile. A profile with only wins is a sales sheet, not intelligence. Title-pairs.
 
-**Signal history.** The table below. Full paper trail, no toggle, this is the audit record.
+**Working record.** Signal history is the audit record. It sits in a toggle at the bottom of the profile, titled by what is inside, and nothing is deleted when a profile is rewritten. Anything the body no longer shows moves there.
 
 **Open questions.** Bold heading, then grey text. Never buried as plain grey with no heading.
 
@@ -200,7 +206,8 @@ Threat scores are **not** restated in the page body. The database property and i
 
 ---
 
-*[Your name] x Claude · September 4, 2026 · v7*
+*v8*
+*v8 changes: reality check gains one thesis line per gap, in option C form. Decision callouts added, red when open and grey when closed. Bets reading added as an optional section, top tier by default and extendable by user setting, using the tags in analysis-rules.md §2.8. Signal history moves to a Working record toggle. The At a glance brief and the reader model are not yet in this template and are logged for later.*
 *v7 changes: the medium form gains the changelog as a standing section, numbered 0 so the existing section numbers do not shift. It was already present on live medium-form profiles and absent from the template, which is the wrong way round for a rule.*
 *v6 changes: the Reality check rule cut to four elements, one grey line naming the divergence, chipped source links, a one-clause verdict and nothing else, after a rehearsal showed the prose claim-and-evidence lines duplicated what the chips and links already carried. Coverage limits and speculation moved out to Open questions. The rendering checklist split into two checks, renders and complies, with the compliance pre-flight reported item by item rather than assumed, after a profile shipped rendering correctly and breaking most of the formatting rules.*
 *v5 changes: Signal history became one table on every profile, all tiers, with a closed eight-value Type column carrying corporate events and positioning changes, and an empty Grade on the seven non-Signal types. Positioning block added to What they claim, two press fields with the gap between them as the finding. Section 5 renamed from a company-specific name to "Where we win", so a fork does not inherit our name as a heading. Medium form gained Signal history as a sixth section. Read-back rule extended to cover timeouts.*

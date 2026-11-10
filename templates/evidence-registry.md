@@ -75,6 +75,6 @@ Replace nothing here. This file is method and travels as is. Build your own rows
 
 ---
 
-*[Your name] x Claude · September 4, 2026 · v2.1*
+*v2.1*
 *v2.1 changes: TrustRadius checked at category level, found not to cover this category at all, and replaced by Gartner Peer Insights which does. The absence is recorded once as a category finding rather than as 25 rows. Also recorded: a document change that names a database field is not done until the database has the field, after the v2.0 source types were declared here and never added to the live select.*
 *v2.0 changes: all per-company URL tables removed. This file is now method only, and the live database is the sole authoritative source for addresses. Four source types added: positioning descriptor, review-site category, public company register and supplier-facing surface. The date traps found during the August reality check written in as standing rules rather than left in a working record. Careers and pricing rows extended to name the infrastructure-versus-experience read they support.*
