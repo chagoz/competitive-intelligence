@@ -8,7 +8,11 @@
 
 ## 1. Tier criteria
 
-**Gate-keeper rule:** Tier 1 is determined by one criterion only, we have lost deals to them, or they are named by prospects in active evaluations. Everything else is secondary.
+**Gate-keeper rule:** Tier 1 is determined by one criterion only: we have lost a qualifying deal to them, or they are named by prospects in active evaluations. Everything else is secondary.
+
+**What counts as a qualifying loss.** Two conditions, both required. Recent: the deal closed lost within the recency window, counted back from the day the tier is reviewed. The window defaults to 12 months and is set in the user's settings, which offer other windows. On the product area: the deal was for the product area the user defines in their settings. A loss that fails either condition stays on the profile with its date and counts in the deals-lost line, but it does not set the tier.
+
+**Losing the qualification.** A Tier 1 company whose most recent qualifying loss passes the recency window, and that is not named in an active evaluation, is proposed for a move down at the next monthly reality check. Proposed, never moved automatically: tier changes belong to the human.
 
 **What counts as named in an active evaluation.** A company the prospect is demonstrably weighing against us: named on a shortlist, quoted alongside us, named in a comparison the buyer is running, or recorded in a deal as an alternative under consideration. A single mention in passing is not that.
 
@@ -52,11 +56,13 @@ Why this matters: without a recency filter, an old review can read as if it happ
 
 **Defining the window.** The recency filter needs a window, and the window is defined here rather than in whichever skill happens to need it.
 
+**Every watch-list item carries its own time window.** The window applies to any item on the watch list, not only regulation dates. It is written as timestamps with a time zone, and an item outside its window is not scored, however it is worded. Regulation dates need the official source, or two independent ones; a single secondary source is recorded as 🟠 Reported.
+
 **The window runs from where the previous window ended to the moment this research run starts.** Anchoring it to the previous end rather than to the run date is deliberate: contiguity then holds by construction, and it survives a run that slips by a day or two. In the normal weekly rhythm this produces a Tuesday to Monday window, but that is the usual result, not the rule.
 
 - No gap and no overlap with the previous window, ever. If a run slips, the window stretches; it does not shift.
 - The window applies to the **event date**, never to when someone wrote about it, covered it or promoted it. Third-party coverage, analyst commentary and vendor promotion of an earlier event are all out of window if the event is.
-- **One carve-out, first public disclosure.** Where a source reveals something that was not previously public, the disclosure is the event. An analyst report published this week that benchmarks work done months ago is in window for what it discloses, and out of window for the work it describes. A worked example: an industry benchmark naming sixteen vendors, where the benchmarking itself was old, but the fact that we were absent from all sixteen was new on the day the report appeared.
+- **One carve-out, first public disclosure.** Where a source reveals something that was not previously public, the disclosure is the event. An analyst report published this week that benchmarks work done months ago is in window for what it discloses, and out of window for the work it describes. The August 2026 Green Quadrant is the worked example: the benchmarking was old, the fact that our company was absent from sixteen vendors was new on the day it appeared.
 - **Undated is out of window.** It cannot be a candidate for a headline finding. It becomes standing evidence on the profile, or it is discarded.
 - Corporate events keep their §2.5 exemption as standing evidence, but an out-of-window corporate event cannot be a headline candidate.
 - Where a run covers more than one window's worth of time, the output says so in its opening line.
@@ -152,7 +158,7 @@ Every research object in this system is company-indexed. That makes category-lev
 
 *Regulatory movement itself*, not competitor moves on it. Adopted, delayed, amended, consultation opened or closed, enforcement date reached. Sourcing and scope: `watch-list.md` Topic 2.
 
-*Unattributed losses, read as buyer behaviour.* A loss that names no vendor still names a want. HubSpot is already the permanent store; what was missing was the reading.
+*Unattributed losses, read as buyer behaviour.* A loss that names no vendor still names a want. The CRM is already the permanent store; what was missing was the reading.
 
 *Prospect-named companies we do not track.* Per §1 these now trigger a profile, and they also stand as a market observation regardless of the tier outcome.
 
@@ -281,7 +287,7 @@ Example: a competitor announcing free-for-suppliers pricing is a high threat the
 
 Classification is driven by Axis 2 (threat) alone. Axis 1 (talk/implement) is always displayed alongside but never determines whether something gets flagged.
 
-**Corporate events are not scored on either axis.** They are evidence of commitment, not a move against us. Their weight is read in the market lens and in the profile changelog.
+**Corporate events are not scored on either axis.** They are evidence of commitment, not a move against us. Their weight is read in the market lens and in the profile changelog. They do not count toward the candidate total, but they can be selected into the final three.
 
 **Follow-up tracker status:**
 Escalating, threat score rose since last cycle, or a Talk item became Implement
@@ -316,7 +322,7 @@ Max 3 per document. Only when: (1) connects to an active OKR, (2) implies a conc
 
 **The gate is a stop, not a checkpoint.** Claude does not write the digest page, the monthly page, or any Slack post until the human has confirmed the selection. This holds in every permission mode, including auto, and holds even if the request says to just run it. If a run ends with nothing written, that is a correct outcome. The order is fixed: research and scoring, stop for the human, Notion write, then Slack options.
 
-**One exemption, §9 profile updates.** Competitor Profiles entries are updated in the same session a finding is made, before and independently of the gate. Those are a record of what was found, not an editorial choice. Everything else waits.
+**One exemption, §9 profile updates.** Competitor Profiles entries are written through the §9 write plan at the end of the research pass, independently of the gate. Those are a record of what was found, not an editorial choice. Everything else waits.
 
 **No skill configures itself.** A skill may search for a workspace value and ask for confirmation, but it never writes its own configuration. Project knowledge is read-only at runtime, so any attempted write silently does nothing. Report the delta and ask the human to update `configuration.md`.
 
@@ -326,9 +332,9 @@ Max 3 per document. Only when: (1) connects to an active OKR, (2) implies a conc
 
 **Weekly digest**, Layer 1 only, enriched by the latest reality check's findings as context (not restated in full, referenced and acted on). Reads: latest monthly page + previous digest's follow-up tracker. Every finding shown with both Axis 1 (talk/implement) and Axis 2 (threat) visible. Outputs: digest page, 3 Slack options, tracker entry.
 
-**Monthly reality check**, a job with two outputs, not a single document. It is Layer 2 research run monthly. It reads the previous cycle's competitor profiles and HubSpot lost deal data. It applies the recency filter (§2.1) and source honesty tags (§2.2) to everything it finds. It feeds two separate consumers:
+**Monthly reality check**, a job with two outputs, not a single document. It is Layer 2 research run monthly. It reads the previous cycle's competitor profiles and the CRM lost deal data. It applies the recency filter (§2.1) and source honesty tags (§2.2) to everything it finds. It feeds two separate consumers:
 
-1. **Competitor Profiles database**, every profile's evidence tables, positioning block, signal history and changelog get updated immediately (per §9, the always-true rule). This is the detailed, permanent record.
+1. **Competitor Profiles database**, every profile's evidence tables, positioning block, signal history and changelog get updated through the §9 write plan at the end of the research pass (per §9, the always-true rule). This is the detailed, permanent record.
 
    **All-tier refresh.** The monthly reality check refreshes the Layer 2 section on every competitor profile, all tiers, not just Tier 1. Tier 1 keeps its full treatment on top. Lower tiers get, at minimum, a re-scan of their Layer 2 section against the source types in `evidence-registry.md` with the recency filter, and a light glance at their orientation section.
 
@@ -350,7 +356,7 @@ Profile setup → Reality check (job) → Competitor Profiles database (updated 
 
 ---
 
-## 8. Lost deal data, HubSpot
+## 8. Lost deal data
 
 **Field names and connection status are workspace-specific, read them from `configuration.md`, never hardcode them here.** This section defines the method, not the exact endpoint names.
 
@@ -364,17 +370,21 @@ Profile setup → Reality check (job) → Competitor Profiles database (updated 
 
 **Table format:** one row, competitor names as columns with counts, zero entries excluded, Unknown column always present.
 
-**If HubSpot isn't connected, or the fields in `configuration.md` aren't set:** run the reality check without this section and say so explicitly in the output. Never fail the whole reality check over a missing lost-deal pull.
+**The deals-lost line is conditional.** It appears on a profile only when a lost-deal source is connected. Without one, the line is omitted and the rest of the profile is unchanged.
+
+**If no lost-deal source is connected, or the fields in `configuration.md` aren't set:** run the reality check without this section and say so explicitly in the output. Never fail the whole reality check over a missing lost-deal pull.
 
 ---
 
 ## 9. The always-true rule
 
-**Every discovery updates the Competitor Profiles database entry immediately, not at the next scheduled reality check.**
+**Every discovery reaches the Competitor Profiles database in the same session it is found, through a write plan, not at the next scheduled reality check.**
 
-This applies regardless of which skill surfaced the finding: weekly digest, monthly reality check, a competitive mission, or an ad hoc HubSpot pull. If something new is learned about a competitor, the profile page is the single source of truth and must reflect it the same session it was found.
+This applies regardless of which skill surfaced the finding: weekly digest, monthly reality check, a competitive mission, or an ad hoc lost-deal pull. If something new is learned about a competitor, the profile page is the single source of truth and must reflect it the same session it was found.
 
-In practice:
+**The write plan.** Each finding becomes one line in a plan: the profile, the section, the new text, its origin and certainty tags, and its event date. The plan runs at the end of the research pass, without a gate. Each line is verified before it runs. A line that fails verification leaves the plan, and the profile stays as it was. A line that cannot run, for a blocked permission or a lost connection, is reported with what landed and what did not, and every other line still runs. One blocked write never holds the rest.
+
+In practice, each line covers:
 - Update the Changelog block at the top with what changed and when
 - Update the relevant evidence table row rather than only adding a new signal history line
 - Update the positioning block if the descriptor or boilerplate moved
@@ -386,7 +396,8 @@ Why this matters: dated findings that live only in a digest or a mission page go
 
 ---
 
-*[Your name] x Claude · September 8, 2026 · v1.12*
+*v1.13*
+*v1.13 changes: §1 gate-keeper gains the qualifying-loss definition, with a user-set recency window defaulting to 12 months. §2.1 gains a time window for every watch-list item, and the regulation source rule. §3 lets unscored items be selected into the final three. §6, §7 and §9 move profile updates to a write plan at the end of the research pass, without a gate. §8 makes the deals-lost line conditional on a lost-deal source.*
 *v1.12 changes: the friction rule in §2.9 corrected. A friction raises the single Axis 2 threat score rather than producing a parallel one, because any output that ranks candidates mechanically needs one number to sort on and two would make the ranking editorial by accident. Matching scoring trigger added to §3. Header version stamp removed, per the single-stamp rule now in README.*
 *v1.11 changes: §2.9 gains a third evidence state, tested and confirmed absent, which is a finding rather than a gap and must be distinguishable from empty. And it gains the friction rule: archetype frictions in about-us.md are standing research questions about competitors, scored against the friction rather than against a theme watch, with an explicit bar on frictions being promoted into theme watches. No new research layer and no new source type, so a friction changing in About Us needs no edit here.*
 *v1.10 changes: two rules migrated in from the weekly digest skill, where they were carried inline against the ownership rule. §2.1 gains the window definition, re-anchored to the previous window's end rather than to the run date so contiguity holds when a run slips, plus a carve-out for first public disclosure. §2.2.1 added, the absence bar, scaled to bounded versus unbounded claims rather than a flat path count, with the guessed-404 rule and the category-level precedence written in. Both now live with the method rather than with one skill.*
@@ -395,6 +406,6 @@ Why this matters: dated findings that live only in a digest or a mission page go
 *v1.7 changes: §1 Tier 5 redefined as the platforms the category sits on, and prospect-named unknowns now trigger a profile rather than vanishing on a negative tier review. §2.5 added, corporate events, seven types carrying no talk-implement verdict and exempt from the recency filter on the event date. §2.6 added, the market lens, four already-collected inputs read at category level with two blocks that never merge and no promotion rule. §2.7 added, the persona schema, seven generic fields with instances living in About Us. §3 stops restating the theme watch list, which About Us owns, the drift that produced nine themes against eleven. §7 monthly outputs consolidated into one page. §8 unattributed losses routed to the market lens instead of being discarded.*
 *v1.6 changes: §6 gate strengthened from a statement of ownership into an explicit stop, and the §9 profile-update exemption named.*
 *v1.5 changes: §7 monthly reality check specified as an all-tier job.*
-*v1.4 changes: §8 HubSpot field names moved out to configuration.md.*
+*v1.4 changes: §8 CRM lost-deal field names moved out to configuration.md.*
 *v1.3 changes: Monthly review template shipped, data-sufficiency gate named as a rule.*
 *v1.2 changes: two-axis scoring model, recency filter, source honesty tags.*
