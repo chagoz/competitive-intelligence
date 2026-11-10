@@ -61,7 +61,7 @@
 
 ---
 
-## HubSpot (or your CRM)
+## Your CRM (lost-deal data)
 
 **Status:** not configured
 

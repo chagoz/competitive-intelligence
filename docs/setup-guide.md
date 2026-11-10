@@ -12,10 +12,10 @@ You'll need:
 - [ ] Access to the Claude account you're setting this up on
 - [ ] Notion connected to that account, with access to your workspace
 - [ ] Slack connected, if you want digest posts distributed there (optional)
-- [ ] HubSpot connected, if you want lost-deal data in the monthly reality check (optional, the system works without it)
+- [ ] Your CRM connected, if you want lost-deal data in the monthly reality check (optional, the system works without it)
 - [ ] The knowledge files and skill zips from this system, downloaded somewhere you can find them
 
-If any connector (Notion, Slack, HubSpot) isn't available yet, that's usually an admin setting on Team or Enterprise plans. Ask whoever manages your workspace to turn it on before you continue, steps 2 onward won't fully work without it.
+If any connector (Notion, Slack, your CRM) isn't available yet, that's usually an admin setting on Team or Enterprise plans. Ask whoever manages your workspace to turn it on before you continue, steps 2 onward won't fully work without it.
 
 ---
 
@@ -70,7 +70,7 @@ about-us.md and analysis-rules.md. For writing output, also read
 language-guidelines.md (the relevant part: 1 for all documents, 
 2 for Weekly Digest, 3 for Quarterly Review) and the matching template 
 file. Always read configuration.md before touching Notion, Slack, or 
-HubSpot, never use a page ID or field name from memory. Treat the 
+your CRM, never use a page ID or field name from memory. Treat the 
 uploaded documents as current and authoritative, they are a deliberate 
 snapshot, not a live Notion mirror.
 ```
@@ -108,7 +108,7 @@ Run through these three checks before trusting the system day to day:
 
 - [ ] **Weekly digest test.** Let it finish a full run, check the Notion page it creates looks right, and that it stopped and asked you to confirm the top 3 before writing anything (it should never skip this).
 - [ ] **Slack test, if connected.** Check the Slack post options it drafts, and that it asks where to post rather than posting automatically.
-- [ ] **HubSpot test, if connected.** Run the monthly reality check and confirm the lost-deal table has real numbers in it, not an empty table or an error.
+- [ ] **CRM test, if connected.** Run the monthly reality check and confirm the lost-deal table has real numbers in it, not an empty table or an error.
 
 If any of these don't work, don't try to fix it mid-run, stop and check `configuration.md` first, most first-time issues come from a value that got confirmed against the wrong Notion page.
 
@@ -121,7 +121,7 @@ If any of these don't work, don't try to fix it mid-run, stop and check `configu
 | Claude can't find a Notion page | The title in `configuration.md` doesn't match the actual page title, or Claude doesn't have Notion access turned on |
 | Claude writes to the wrong database | `configuration.md` was confirmed against a duplicate or old page, check for a stray page with a similar name |
 | Slack post doesn't send | Claude should never send it automatically anyway, check it's asking you where to post, not trying to post itself |
-| HubSpot data comes back empty | HubSpot isn't connected, or the field names in `configuration.md` don't match your workspace, check `analysis-rules.md` §8 for what it's expecting |
+| CRM data comes back empty | your CRM isn't connected, or the field names in `configuration.md` don't match your workspace, check `analysis-rules.md` §8 for what it's expecting |
 | A skill seems to ignore the rules | Check all the knowledge files actually uploaded, a missing `analysis-rules.md` is the most common cause |
 | Notion structure exists but everything is empty | Step 4 of setup (first competitor evidence batch) never ran or was skipped, run `continue setup` and say yes when it offers to process your Tier 1 list |
 
