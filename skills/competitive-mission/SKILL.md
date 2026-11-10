@@ -1,9 +1,18 @@
 ---
 name: competitive-mission
-description: "Open-scope ad hoc competitive research for a specific question that doesn't fit the weekly or monthly cadence, e.g. 'research Competitor X for the upcoming RFI' or 'what did competitors do with AI in H1'. Produces a standalone Notion page, structure determined by the mission's own needs. Always ad hoc, on demand, never scheduled."
+description: "Open-scope ad hoc competitive research for a specific question that doesn't fit the weekly or monthly cadence, e.g. 'research EcoVadis for the Tudor RFI' or 'what did competitors do with AI in H1'. Produces a standalone Notion page, structure determined by the mission's own needs. Always ad hoc, on demand, never scheduled."
 ---
 
 # Competitive Mission
+
+## Route first
+
+- A confirmed tier and employee list in this conversation: this is the write step. Go to Output, items 1 to 4.
+- An unconfirmed or partly confirmed set: gate resume. Do not re-research.
+- Anything else, including any case not clearly one of the above: still at the gate, and ask. Ambiguity never resolves toward writing.
+- Neither state exists: research run.
+
+If the earlier conversation is gone, run a fresh research pass and say so in the first line.
 
 ## Status and cadence
 
@@ -13,7 +22,7 @@ description: "Open-scope ad hoc competitive research for a specific question tha
 
 **If the request is vague, ask for scope clarification before researching.** Never guess at what good looks like for an undefined ask.
 
-**If comparative analysis against your company is requested and the necessary input on your side is not available, flag the gap explicitly and ask whether to proceed without it or wait. Never fabricate your own side of a comparison.**
+**If comparative analysis against the company is requested and the company-side input is not available, flag the gap explicitly and ask whether to proceed without it or wait. Never fabricate the company side of a comparison.**
 
 *What is available, as of September 8, 2026: about-us.md holds Product direction, three directions and five explicit non-goals, which is what the bets pillar measures distance against, and buyer archetypes for the sourcing side with their documented frictions, which are standing research questions per section 2.9. What is still missing: the investment side, which has no documented archetypes, so any investment-side reading has no roles to attach evidence to.*
 
@@ -50,9 +59,9 @@ Read from Project knowledge, scoped to what the mission needs rather than all of
 - evidence-registry.md for source types and their priorities
 - configuration.md for the Competitive Intelligence home page and the Competitor Profiles database
 
-For whatever competitors the mission touches, read their Competitor Profiles entries rather than re-researching from scratch. Anything new learned is written back to the profile in the same session, per section 9, the always-true rule. That applies to a mission exactly as it applies to a scheduled run.
+For whatever competitors the mission touches, read their Competitor Profiles entries rather than re-researching from scratch. Anything new learned is one line in the write plan, per section 9, run at the end of the research pass. That applies to a mission exactly as it applies to a scheduled run.
 
-**Do not attempt to write to configuration.md.** Report the delta and ask the user to update it. **No skill configures itself.**
+**Do not attempt to write to configuration.md.** Report the delta and ask the operator to update it. **No skill configures itself.**
 
 ---
 
@@ -92,14 +101,14 @@ Apply language-guidelines.md Part 1 regardless of structure: source honesty, rec
 
 ---
 
-## What this skill does not do
+## Gotchas
 
-- Does not assume a request is well-scoped just because it sounds specific.
-- Does not invent your own side of a comparison as a data point to complete a comparison.
-- Does not carry method inline. The window, the absence bar, scoring, bets and frictions live in analysis-rules.md and are referenced, never restated.
-- Does not publish a partial bet, and does not omit an excluded one.
-- Does not write an absence as confirmed without meeting section 2.2.1.
-- Does not scope research that rests on public user voice without saying what its ceiling is.
-- Does not skip the profile write-back.
-- Does not write its own configuration.
-- Does not run on a schedule.
+- A request is not scoped just because it sounds specific. Scope the question, the depth and the stopping rule before research starts.
+- Never fabricate the company's own side of a comparison. Flag the gap instead.
+- Public user voice has a ceiling. Say what that ceiling is.
+- A mission that skips the write plan loses what it learned, and the next run starts again from nothing.
+
+---
+
+*v3*
+*v3 changes: route-first added. Profile write-back moves to the write plan at the end of the research pass. The do-not list is replaced by gotchas.*

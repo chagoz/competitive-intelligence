@@ -1,11 +1,17 @@
 ---
 name: ci-system-setup
-description: "Setup skill, two phases. Phase 1, content: asks who the company is, competitors, watch list topics, and voice, then writes About Us, Competitor List, Watch List, and Language Guidelines, only for a genuinely new setup with no existing content, skipped automatically when these already exist (as they do for your company). Phase 2, architecture: checks whether the five required Notion pages and databases exist, and for any that don't, shows the proposed shape and builds it blank once confirmed. Never adds competitor data or digest content, that's the other skills' job. Trigger phrases: 'set up competitive intelligence system', 'build notion workspace', 'run workspace init'. Phase 1 runs once per company. Phase 2 is safe to re-run any time."
+description: "Setup skill, two phases. Phase 1, content: asks who the company is, competitors, watch list topics, and voice, then writes About Us, Competitor List, Watch List, and Language Guidelines, only for a genuinely new setup with no existing content, skipped automatically when these already exist (as they do for an existing company). Phase 2, architecture: checks whether the five required Notion pages and databases exist, and for any that don't, shows the proposed shape and builds it blank once confirmed. Never adds competitor data or digest content, that's the other skills' job. Trigger phrases: 'set up competitive intelligence system', 'build notion workspace', 'run workspace init'. Phase 1 runs once per company. Phase 2 is safe to re-run any time."
 ---
 
 # Competitive Intelligence System Setup
 
 *Two distinct jobs in one skill: getting the content right (who you are, competitors, watch list, voice) and getting the Notion structure right (the pages and databases everything else reads and writes to). A brand new fork usually needs both, in order. An already-populated workspace only needs the second.*
+
+## Route first
+
+- The phase is chosen at Step 0, and the choice is stated in the first line.
+- If the earlier conversation is gone during Phase 1, start Phase 1 from its first question. Do not resume from remembered answers.
+- If Phase 2 was interrupted, check what already exists before creating anything, and confirm each item again.
 
 ## Status
 
@@ -18,7 +24,7 @@ description: "Setup skill, two phases. Phase 1, content: asks who the company is
 
 Before asking anything, check whether `about-us.md`, `competitor-list.md` and `watch-list.md` already exist in Project knowledge with real, specific content, not placeholders.
 
-**If they exist with real content** (your company's case): skip Phase 1 entirely, say so plainly, and go directly to Phase 2.
+**If they exist with real content** (an existing company's case): skip Phase 1 entirely, say so plainly, and go directly to Phase 2.
 
 **If they do not exist, or are template shells:** run Phase 1 first, then Phase 2 once Phase 1's output is confirmed.
 
@@ -39,13 +45,15 @@ Never run Phase 1 "just in case." Asking someone to re-answer who their company 
 
 ### Phase 1 output
 
-Four new reference documents, written in the structure of the existing templates but populated entirely with the new user's answers, never with your company's content as a default or placeholder.
+Four new reference documents, written in the structure of the existing templates but populated entirely with the new user's answers, never with any existing company's content as a default or placeholder.
 
 **Point them at the ownership rule in `README.md`.** Positioning belongs to About Us, craft belongs to Language Guidelines. A copy in two files is how the two versions start.
 
-### What Phase 1 does not do
+### Gotchas, Phase 1
 
-Does not guess any answer to speed setup up. Does not copy your company's competitors, watch list or voice into a new user's docs. Does not run again once these documents exist.
+- A guessed answer speeds setup now and persists in every later run. Ask every question.
+- Copying another company's competitors, watch list or voice into a new workspace is the failure this phase exists to prevent.
+- Phase 1 does not run again once these documents exist.
 
 ---
 
@@ -122,12 +130,18 @@ If an old page or database with a similar name already exists: leave it exactly 
 
 A short status table: item, found or created, type, any old or stray item flagged for awareness but left untouched. Plus the list of values the human needs to add to `configuration.md`. Nothing else.
 
-### What Phase 2 does not do
+### Gotchas, Phase 2
 
-Does not touch, read, merge into, or archive any existing page or database, even one that looks like an old version of what it is building. Does not add any content or row. Does not skip confirmation, even on a re-run. Does not write `configuration.md`.
+- An existing page or database is never touched, read into, merged or archived, even one that looks like an old version of what this phase builds.
+- Each item is confirmed before it is created, including on a re-run.
+- No content or row is added in this phase, and `configuration.md` is never written by the skill.
 
 ---
 
 ## What this skill never does, either phase
 
 Does not run on a schedule. Does not guess at content to save time. Does not touch existing Notion items it was not asked to build. Does not write competitor data, digest content, or any row-level information. That boundary is what keeps this skill safe to re-run.
+---
+
+*v3*
+*v3 changes: route-first added, stating how the phase is chosen and what a lost conversation does. The two do-not lists are replaced by gotchas. The never section is kept, since it states the hard boundary.*
