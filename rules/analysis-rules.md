@@ -411,7 +411,7 @@ Why this matters: dated findings that live only in a digest or a mission page go
 *A condition is something the system can check by itself. Whether a judgment is right is never checked here. That stays with the human at the gate.*
 
 **1. Search.** The run knows what to scan and where.
-- At setup, the digest passes when: at least 3 watch topics each state what to scan for; at least 3 Tier 1 companies have a name plus a unique identifier, such as a domain, wherever the name could be mistaken for another; the tracked set holds at least 8 companies across at least 3 tiers, not counting Tier 5 defaults that are not companies; and every Tier 1 company has at least one source in the Evidence Registry.
+- At setup, the digest passes when: at least 3 watch topics each state why, what to scan for, and a noise floor, the activity level below which the topic's movement is not treated as a signal; at least 3 Tier 1 companies have a name plus a unique identifier, such as a domain, wherever the name could be mistaken for another; the tracked set holds at least 8 companies across at least 3 tiers, not counting Tier 5 defaults that are not companies; and every Tier 1 company has at least one source in the Evidence Registry.
 - At setup, the profile passes when: the company has a name plus a unique identifier.
 - Before the gate, the run also passes search execution: every Tier 1 company and every topic returned at least one result about it, of any date; every query used the identifier; and every Tier 1 company has a live path, meaning a registry source with at least one dated item in the last 90 days.
 
