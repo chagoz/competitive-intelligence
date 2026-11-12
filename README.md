@@ -117,6 +117,16 @@ Once setup is done, every competitor sits in one database, scored on two axes: t
 
 These are a snapshot, not a live mirror of Notion. When a live Notion page changes, re-export the affected file and re-upload it, replacing the old version. There's no automatic sync, a deliberate trade for keeping the system self-contained and not dependent on a private workspace.
 
+## Known risks
+
+Three failure modes to watch for when you run this, each a case where the output looks better than the evidence behind it.
+
+**Short text loses the rationale.** Compressing a finding to a single line can drop the reasoning behind a score or a recommendation, leaving the verdict without its basis. Keep the "why" visible rather than trimming to the shortest possible line.
+
+**Time estimates are rough.** Any run-time figure in this repo rests on thin measurement, so treat it as an estimate per environment, not a guarantee, until you have timed your own runs.
+
+**Drafts can inflate completion.** A well-formatted draft reads as more finished than it is: the shape can look complete while the data is thin or a step was skipped. Judge completeness by the data and the sufficiency signal, not by how polished the draft looks.
+
 ## For a fork
 
 Four files are specific to whoever's running this and need to be replaced with your own: `about-us.md`, `competitor-list.md`, `watch-list.md`, and `configuration.md`. The first three end with a short section on how to build your own version. Everything else defines a methodology rather than any one company's content, and travels as-is. The `ci-system-setup` skill exists specifically to walk you through that replacement.
