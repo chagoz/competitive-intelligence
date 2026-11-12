@@ -49,6 +49,10 @@ Four new reference documents, written in the structure of the existing templates
 
 **Point them at the ownership rule in `README.md`.** Positioning belongs to About Us, craft belongs to Language Guidelines. A copy in two files is how the two versions start.
 
+### Sufficiency check at the end of setup
+
+Run the setup check from `analysis-rules.md` §10 against the four documents: the Search setup tests and the input map, inputs only. State every input that fails or is missing with the condition it weakens and the run it affects. A skip is never silent. The Evidence Registry is empty on a fresh setup and is disclosed as a known thin input, not a blocker: it fills run by run as profiles are set up.
+
 ### Gotchas, Phase 1
 
 - A guessed answer speeds setup now and persists in every later run. Ask every question.
@@ -143,5 +147,6 @@ A short status table: item, found or created, type, any old or stray item flagge
 Does not run on a schedule. Does not guess at content to save time. Does not touch existing Notion items it was not asked to build. Does not write competitor data, digest content, or any row-level information. That boundary is what keeps this skill safe to re-run.
 ---
 
-*v3*
+*v4*
+*v4 changes: §10 sufficiency setup check added at the end of Phase 1, inputs only, disclosing thin inputs with their cost.*
 *v3 changes: route-first added, stating how the phase is chosen and what a lost conversation does. The two do-not lists are replaced by gotchas. The never section is kept, since it states the hard boundary.*

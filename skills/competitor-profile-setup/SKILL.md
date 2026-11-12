@@ -64,6 +64,10 @@ Check the AI-native flag independently; it is cross-cutting, not a tier.
 
 **Propose the tier and the reasoning, then wait for the operator to confirm before saving.**
 
+### Sufficiency check before the gate
+
+Apply the profile conditions in `analysis-rules.md` §10 before the gate: Search (name plus a unique identifier), Fill the gate (both research layers searched), and Weight (a tier placed on an evidence limb, or marked provisional on a stand-in). State any failed condition with its cost. A thin profile is disclosed, never padded into a confident tier.
+
 ### The gate protocol
 
 **The gate closes on one condition only: the skill has restated the proposed tier and the employee list, and the operator has agreed to that restatement.** Nothing else counts as confirmation. A wrong tier persists in a database with a rationale attached, which is worse than a wrong document.
@@ -98,5 +102,6 @@ Open the write step by restating the confirmed tier and the confirmed employee l
 
 ---
 
-*v3*
+*v4*
+*v4 changes: §10 sufficiency check added before the tier gate, with the profile conditions Search, Fill the gate and Weight.*
 *v3 changes: route-first added. The gate-keeper rule now names the qualifying-loss definition in analysis-rules.md §1, with the recency window as a user setting, default 12 months. The do-not list is replaced by gotchas.*
