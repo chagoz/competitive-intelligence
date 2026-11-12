@@ -41,7 +41,7 @@ anything found at the user path for these five is a snapshot rather than the sou
 **Mode:** two runs in one conversation, research then write, on the cadence in `configuration.md`, plus ad hoc.
 **Human gate:** required, every run, on the top 3 selection, closing only on a restatement the user agrees to.
 **Reads:** `about-us.md`, `analysis-rules.md`, `language-guidelines.md` Parts 1 and 2, `competitor-list.md`, `watch-list.md`, `configuration.md`, the latest monthly page, the previous digest's follow-up tracker.
-**Writes:** the digest page, 3 Slack post options, a Digest Impact Tracker entry after posting. Any corporate event or prospect-named company found is written to the profile immediately, per §9, before and independently of the gate.
+**Writes:** the digest page, 3 Slack post options, a Digest Impact Tracker entry after posting. Any corporate event or prospect-named company found is written to the profile through the §9 write plan at the end of the research pass, independently of the gate.
 **Also owns:** the choice between a numbered digest and a Flash Report. A Flash Report replaces the digest only when the findings consolidate around one question, that question has a live business consequence, and the research is mission-depth. Named, not numbered, and it does not break the weekly sequence.
  
 ### 2. Monthly Reality Check
@@ -50,7 +50,7 @@ anything found at the user path for these five is a snapshot rather than the sou
 **Mode:** two runs in one conversation, research then write, on the cadence in `configuration.md`, covering the previous calendar month, plus ad hoc.
 **Human gate:** required, on the top 3 key learnings selection, closing only on a restatement the user agrees to.
 **Reads:** `about-us.md`, including the Product direction the bets pillar measures against, `analysis-rules.md`, `evidence-registry.md` for source types, `monthly-review-template.md`, `language-guidelines.md` Parts 1 and 3, `configuration.md`, the Evidence Registry database, the Competitor Profiles database, the Competitor Employee List, CRM lost-deal data.
-**Writes:** every affected Competitor Profiles entry, immediately, all tiers, per the all-tier rule in §7 and the always-true rule in §9. Then, once the top 3 are selected, **one monthly page** holding the review, the market lens and the working record in a toggle. Then 3 Slack post options for the review and a tracker row.
+**Writes:** every affected Competitor Profiles entry, all tiers, through the §9 write plan at the end of the research pass, per the all-tier rule in §7 and the always-true rule in §9. Then, once the top 3 are selected, **one monthly page** holding the review, the market lens and the working record in a toggle. Then 3 Slack post options for the review and a tracker row.
  
 *One page per month, not a pair of sibling pages. The Theme Watch activity matrix and the lost-deal table are sections inside the working record toggle, not separate documents.*
  

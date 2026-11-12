@@ -352,7 +352,7 @@ Max 3 per document. Only when: (1) connects to an active OKR, (2) implies a conc
 
 **Dependency chain:**
 ```
-Profile setup → Reality check (job) → Competitor Profiles database (updated immediately)
+Profile setup → Reality check (job) → Competitor Profiles database (updated via the §9 write plan at end of pass)
                                     → Monthly page (review + market lens + working record)
                                          ↓
                                     Weekly digest (reads the monthly page as enrichment)
