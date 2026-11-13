@@ -143,11 +143,13 @@ Do not write the Notion page. Do not draft Slack options. Not in any permission 
 
 ## Phase 2, write, once the gate has closed
 
-### Step 1, restate the confirmed three. First, before anything else.
+### Step 1, open with the confirmed three and the writing-layer versions. First, before anything else.
 
-Open the write run by restating the three confirmed items, in one line each, exactly as agreed.
+The write run's first output is one opening block with two parts, in this order: the three confirmed items restated in one line each, exactly as agreed, then the writing-layer versions line from Step 2. Nothing is drafted, asked or reported before this block is complete.
 
-This is the mis-route check. If the routing read the conversation wrongly, or a modification was applied that the operator did not intend, it is visible now, before a page exists, rather than after it is published.
+Producing the versions line requires the Step 2 reads, so do those reads first, silently; the opening block is still the run's first output. A write run that opens with the three picks but no versions line has skipped Step 2 and must stop and complete the block before going on.
+
+This is the mis-route check and the audit stamp in one place. If the routing read the conversation wrongly, or a modification was applied that the operator did not intend, it is visible now, before a page exists, rather than after it is published. And every run states which rule and template versions produced it, so a bad page can be traced to the files that shaped it.
 
 ### Step 2, re-read the writing layer. Blocking.
 
@@ -158,7 +160,7 @@ Read these now. Do not rely on anything read in Phase 1.
 - `about-us.md`, the positioning vocabulary and the reader groups
 - `templates/flash-report-template.md`, only if that format was chosen at the gate
 
-**Before drafting anything, state each file read with its version stamp**, taken from the file's own footer. Where a file carries no version, give its Last updated date.
+**State each file read with its version stamp in the Step 1 opening block**, taken from the file's own footer. Where a file carries no version, give its Last updated date.
 
 Example: `Writing layer read: language-guidelines.md v5, digest-template-structure.md v2, about-us.md [version].`
 
@@ -276,7 +278,8 @@ Command, page: `python3 digest_check.py payload page.md --teams "[team names]" -
 
 ---
 
-*v5*
+*v6*
+*v6 changes: the write run opens with one block carrying the confirmed three and the writing-layer versions line, per eval-set S4.1. The versions statement moves from a before-drafting rule in Step 2 to part of the run's first output in Step 1.*
 *v5 changes: title-lookup recovery, a configured title that finds nothing stops and names the field and the searched value, matching configuration.md.*
 *v4 changes: §10 sufficiency check added before the gate, covering search execution, Fill the gate and Weight.*
 *v3 changes: profile writes move to the write plan at the end of the research pass, without a gate. Route-first is stated in every skill. A fresh research pass replaces rebuilding the sheet from profiles. Gotchas and the check script replace the do-not list. The What's for us line is optional and off by default.*
