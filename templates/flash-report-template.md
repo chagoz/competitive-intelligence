@@ -10,7 +10,7 @@ formatting, the emoji system and the mandatory inline markers, which all live in
 `language-guidelines.md` Part 1. Scoring, tier logic and source honesty rules live in
 `analysis-rules.md`.*
 
-*Created August 18, 2026 · v4*
+*Created August 18, 2026 · v5*
 
 ---
 
@@ -122,7 +122,8 @@ unreadable. Use dividers and bold paragraph titles for structure below H2.
 
 ---
 
-*v4*
+*v5*
+*v5: remove a real name from the v2 footer line, anonymization.*
 *v4: wire the eventfulness bar, a Tier 2 to 4 competitor's change is reportable only when it clears the bar in `configuration.md`, defined in `analysis-rules.md` §1.*
-*v2: strategy brief added as a standing section after reader feedback from Disa.*
+*v2: strategy brief added as a standing section after reader feedback.*
 *v3: emoji headers specified per section, which they were not in v1 or v2, and inline markers written in as a mandatory list. The original omission is why the first edition improvised its own symbols.*
