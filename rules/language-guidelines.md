@@ -296,9 +296,9 @@ Every claim answers "what does this mean for the business or buyer," not "what d
 Bad: "No in-platform supplier dialogue."
 Good: "Buyers are asking for something we already offer and a Tier 1 competitor doesn't, worth confirming this is said explicitly in sales conversations."
 
-### Data-sufficiency gate
+### Sufficiency, trend condition
 
-If there isn't enough reality check history for a genuine time comparison, don't stretch two points into a trend. Run a dedicated fresh search against the theme watch list itself, topic by topic, not company by company, to establish an honest current-state baseline instead.
+The trend check is the monthly-only condition of the sufficiency check (`analysis-rules.md` §10). If there isn't enough reality check history for a genuine time comparison, don't stretch two points into a trend. Run a dedicated fresh search against the theme watch list itself, topic by topic, not company by company, to establish an honest current-state baseline instead.
 
 Bad: calling two reality checks a "four-month view."
 Good: "Two reality checks exist so far, not enough for a trend line. This section reflects a fresh baseline search instead."
@@ -313,7 +313,8 @@ Numbered, divider between each item. Team code-tag kept, decoupled from any dire
 
 ---
 
-*v6*
+*v7*
+*v7 changes: the Data-sufficiency gate renamed to the sufficiency trend condition, pointing to `analysis-rules.md` §10.*
 *v6 changes: Part 1 gains Sentence shape, kept separate from tone, after the compressed-line rule. Colour registers gain the red open-decision and grey closed-decision callouts, following profile template v8.*
 *v5 changes: the audience pool moved out to About Us, since our readership is self-knowledge and a fork has different readers; the two craft rules that follow from having several readers stay here. 🌐 added for the market lens, after an edition borrowed the high-threat marker as a section header, with an explicit rule against reusing inline markers in headings. Corporate events exemption added to the inline marker list. Words to avoid and AI language now state that positioning-bearing vocabulary lives in About Us. Part 3 retitled from Quarterly Review to the monthly page and pointed at its template.*
 *v4 changes: certainty chips added to the inline-markers table.*

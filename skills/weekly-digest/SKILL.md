@@ -120,6 +120,8 @@ Then two short blocks, each present even when empty:
 
 No preamble, no methodology, no narrative, no partial page. This sheet is a decision document for one reader choosing three things. Completeness is the wrong default for it.
 
+**Run the sufficiency check before the gate.** Apply `analysis-rules.md` §10: search execution, Fill the gate and Weight. Trace any failure to its cause in order, setup then search execution then market, and state it with its cost. The "fewer than four candidates" line above is the Fill the gate condition; do not report a quiet market until setup and search execution have passed.
+
 ### Step 10, the gate protocol
 
 Present the sheet and wait.
@@ -273,5 +275,6 @@ Command, page: `python3 digest_check.py payload page.md --teams "[team names]" -
 
 ---
 
-*v3*
+*v4*
+*v4 changes: §10 sufficiency check added before the gate, covering search execution, Fill the gate and Weight.*
 *v3 changes: profile writes move to the write plan at the end of the research pass, without a gate. Route-first is stated in every skill. A fresh research pass replaces rebuilding the sheet from profiles. Gotchas and the check script replace the do-not list. The What's for us line is optional and off by default.*

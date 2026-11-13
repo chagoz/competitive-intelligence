@@ -114,6 +114,10 @@ Property names are Talk/Implement and Threat score. **Threat scores are proposed
 
 **The plan runs before the gate.** If the conversation is lost after this point, the profiles already hold the findings, and a fresh research pass recovers the sheet.
 
+### Sufficiency check before the gate
+
+Apply `analysis-rules.md` §10 before presenting the sheet: search execution, Fill the gate, Weight, and the monthly-only Trend condition. Trace any failure to its cause in order, setup then search execution then market, and state it with its cost. Do not report a quiet market until setup and search execution have passed.
+
 ### Step 9, the candidate sheet and the gate protocol
 
 **This phase exists so the operator chooses. It is never abbreviated, never pre-decided, and never replaced by a finished selection.**
@@ -201,9 +205,9 @@ Draft 3 Slack post options for the review, same mechanism as the digest, and log
 
 ---
 
-## Data-sufficiency gate
+## Sufficiency, trend condition
 
-If there is not enough reality check history for a genuine time comparison, do not stretch limited data into a trend. State how many reality checks exist and present current state rather than direction of travel. If a baseline is needed instead, run a dedicated fresh search against the topics in `watch-list.md`, topic by topic, and flag it as a separate step rather than compressing it into the same session.
+The trend check is the monthly-only condition of the sufficiency check (`analysis-rules.md` §10). If there is not enough reality check history for a genuine time comparison, do not stretch limited data into a trend. State how many reality checks exist and present current state rather than direction of travel. If a baseline is needed instead, run a dedicated fresh search against the topics in `watch-list.md`, topic by topic, and flag it as a separate step rather than compressing it into the same session.
 
 ---
 
@@ -252,5 +256,6 @@ Command: `python3 monthly_check.py page.md --teams "[team names]" --sections "[s
 
 ---
 
-*v3*
+*v4*
+*v4 changes: §10 sufficiency check added before the gate, covering search execution, Fill the gate, Weight and the monthly-only Trend condition. The former data-sufficiency gate renamed to the sufficiency trend condition, pointing to §10.*
 *v3 changes: the research pass writes profiles through the write plan at its end, before the gate and without waiting for it. Bets reading is top tier by default and extendable by user setting. The lost-deal pull runs only when a lost-deal source is connected. Gotchas and the check script replace the do-not list.*

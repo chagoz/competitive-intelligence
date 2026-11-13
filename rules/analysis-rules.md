@@ -400,7 +400,94 @@ Why this matters: dated findings that live only in a digest or a mission page go
 
 ---
 
-*v1.14*
+## 10. Sufficiency
+
+*What a run needs before its output can reach the human gate, and how the system checks it. Read at the end of setup, and again before every gate. Applies to ci-system-setup, weekly-digest, monthly-reality-check and competitor-profile-setup. Competitive mission keeps its own three-findings rule in its skill.*
+
+*This section owns the conditions, their pass tests, the diagnosis order, and the input map that ranks every setup input by criticality. It does not own scoring, which stays in §3, the recency window, which stays in §2.1, or cadence, which lives in `configuration.md`. The setup inputs themselves are collected by ci-system-setup.*
+
+### 10.1 The conditions
+
+*A condition is something the system can check by itself. Whether a judgment is right is never checked here. That stays with the human at the gate.*
+
+**1. Search.** The run knows what to scan and where.
+- At setup, the digest passes when: at least 3 watch topics each state why, what to scan for, and a noise floor, the activity level below which the topic's movement is not treated as a signal; at least 3 Tier 1 companies have a name plus a unique identifier, such as a domain, wherever the name could be mistaken for another; the tracked set holds at least 8 companies across at least 3 tiers, not counting Tier 5 defaults that are not companies; and every Tier 1 company has at least one source in the Evidence Registry.
+- At setup, the profile passes when: the company has a name plus a unique identifier.
+- Before the gate, the run also passes search execution: every Tier 1 company and every topic returned at least one result about it, of any date; every query used the identifier; and every Tier 1 company has a live path, meaning a registry source with at least one dated item in the last 90 days.
+
+**2. Fill the gate.** The human has a real choice.
+- Digest passes when: at least 4 candidates survive the recency gate (§2.1).
+- Profile passes when: both research layers (§2) were searched, so a claim can be compared with what shipped.
+
+**3. Weight.** Candidates can be ordered by importance.
+- Both pass when: every threat score (§3) names its anchor. An anchor is a theme watch, a value driver, a documented buyer friction, a row of the regulation coverage table, or a scoring trigger in `watch-list.md`. A score with no named anchor counts as unweighted.
+- Profile also needs: a tier placed on an evidence limb (§1), or marked provisional on a stand-in.
+- An anchor proposed by Claude and adopted without evidence still counts, but the candidate says so.
+
+**4. Trend, monthly reality check only.** A time comparison rests on enough history.
+- Passes when enough reality-check cycles exist to show direction honestly. When they do not, present current state rather than direction of travel, and state how many cycles exist. If a baseline is needed, run a dedicated fresh search against the `watch-list.md` topics, topic by topic, flagged as a separate step, never compressed into the same session.
+- This condition is checked only by the monthly reality check. It does not apply at setup, in the digest, or in a profile setup.
+
+### 10.2 Diagnosing a failure
+
+A failed condition is traced to its cause before it is reported, in this order:
+
+1. **Setup.** An input feeding the condition is missing or fails its test in the map below. Reported as a finding about the setup, naming the input.
+2. **Search execution.** Inputs pass, but the execution test fails: a company or topic returned nothing about it, a query skipped the identifier, or a Tier 1 company has no live path. Reported as a finding about the run, naming the company or topic.
+3. **Market.** Inputs and execution both pass, and Fill the gate still fails. Only then is the window reported as quiet.
+
+**A repeated quiet market is a cadence question.** When Fill the gate fails on market grounds for two consecutive windows, the run proposes a cadence or scope change, which the operator sets in `configuration.md`, instead of reporting a quiet market a third time. The human decides.
+
+### 10.3 Input map
+
+| Input | Owned by | Profile | Digest | Condition fed | Rank | Passes when |
+|---|---|---|---|---|---|---|
+| Tier 1 names with unique identifiers | competitor-list, Competitor Profiles | | ✓ | Search | Critical | At least 3, each with a domain or qualifier where the name is ambiguous |
+| Evidence Registry sources | Evidence Registry | | ✓ | Search | Critical | At least one source per Tier 1 company, with an address |
+| Watch topics, with what to scan for | watch-list | | ✓ | Search, Fill | Critical | At least 3, each with why, what to scan for and a noise floor |
+| Theme watches | about-us | ✓ | ✓ | Weight | Critical | At least 5, each a dimension a competitor move can strike |
+| Competitor name and identifier | profile request | ✓ | | Search | Critical | Name plus domain or qualifier |
+| Regulation coverage | about-us | ✓ | ✓ | Weight | Critical when a scoring trigger depends on our own coverage, otherwise Important | Each tracked regulation marked covered, partial, not covered or monitor |
+| Category, and what we are not | about-us | ✓ | ✓ | Weight | Important | Category named, and at least one thing the company is not |
+| Value drivers | about-us | ✓ | ✓ | Weight | Important | Each names a buyer outcome, not a feature |
+| Buyer frictions | about-us | ✓ | ✓ | Weight | Important | Each role has at least one evidenced friction |
+| How the company came up, deal evidence | profile intake | ✓ | | Weight (tier limb) | Important | The occasion is named with a date or a deal |
+| Tiers 2 to 5 | competitor-list | | ✓ | Fill | Important | Each name has a one-line tier rationale |
+| Product direction and non-goals | about-us | ✓ | | Weight (bets distance) | Important | At least one direction and one non-goal |
+| ICP archetypes | about-us | ✓ | ✓ | Weight | Important | Each segment has a stated need |
+| Priorities or OKRs | about-us | | ✓ | none, sharpens tagging | Refinement | Current cycle, tied to competitive positioning |
+| Loss patterns | about-us | ✓ | ✓ | none, sharpens scoring | Refinement | Drawn from deal data, not assumption |
+| Material already held on a competitor | profile intake | ✓ | | none, speeds research | Refinement | At least one source dropped, with its usage limit |
+| Tone, positioning vocabulary, reader groups | about-us | | ✓ | none, write phase only | Refinement | Register stated, with one sentence that sounds right and one that sounds wrong |
+
+**Critical:** without it, a condition fails.
+**Important:** conditions pass, but scoring flattens or a section is excluded.
+**Refinement:** conditions pass and scoring holds. It only sharpens.
+
+**Rich documents do not make a run searchable.** About Us, the watch list and the tiers make candidates weighable. Search depends on knowing where each company publishes, which is the Evidence Registry's job, and the registry matures run by run. A first run on a new setup should expect Search to be its weakest condition. At a profile setup the registry is written, not required: a new competitor has no registry rows yet, so the registry gates the digest, not the first profile.
+
+### 10.4 Rules
+
+**When the check runs.** At the end of setup, against the inputs only: the Search setup tests and the input map. Fill the gate, Weight, Trend and search execution only exist once a run has searched, so they are checked before every gate.
+
+**A skip carries its cost.** Every skipped input is stated with the condition it weakens and the run it affects, from this map. A skip is never shown without that line.
+
+**No padding.** A condition is never met by lowering quality. Candidates that failed recency do not count toward Fill the gate, and a score with no named anchor does not count toward Weight.
+
+### 10.5 Hypotheses under review
+
+*Every threshold and rank here is a starting design. Each run's test log records which conditions passed or failed, and which cause a failure traced to. Review after five runs.*
+
+- **Thresholds:** 3 watch topics, 3 Tier 1 companies, 8 tracked companies across 3 tiers, 4 candidates at the gate, a 90-day live path.
+- **Ranks:** whether each Critical input is truly needed, and whether anything Important should be Critical. Open question: what a 5-minute setup can afford to lose.
+- **Hypothesis anchors:** whether an adopted, unevidenced anchor should count toward Weight.
+
+**Evidence so far, 10 October 2026.** Two real companies over four windows. On Float, Fill the gate failed in every window, at 0 to 3 candidates. On a mature setup, the setup check passed. A blind run without the Evidence Registry found 0 candidates where the archived digest found 4. That is the case that put the registry on the critical list.
+
+---
+
+*v1.15*
+*v1.15 changes: §10 added, the sufficiency conditions (Search, Fill the gate, Weight, and a monthly-only Trend), the diagnosis order, the input map, and the skip-cost and no-padding rules. The former data-sufficiency gate name is retired and folded into §10 as the Trend condition. The Evidence Registry is a critical Search input for the digest; at a profile setup it is produced, not required.*
 *v1.13 changes: §1 gate-keeper gains the qualifying-loss definition, with a user-set recency window defaulting to 12 months. §2.1 gains a time window for every watch-list item, and the regulation source rule. §3 lets unscored items be selected into the final three. §6, §7 and §9 move profile updates to a write plan at the end of the research pass, without a gate. §8 makes the deals-lost line conditional on a lost-deal source.*
 *v1.12 changes: the friction rule in §2.9 corrected. A friction raises the single Axis 2 threat score rather than producing a parallel one, because any output that ranks candidates mechanically needs one number to sort on and two would make the ranking editorial by accident. Matching scoring trigger added to §3. Header version stamp removed, per the single-stamp rule now in README.*
 *v1.11 changes: §2.9 gains a third evidence state, tested and confirmed absent, which is a finding rather than a gap and must be distinguishable from empty. And it gains the friction rule: archetype frictions in about-us.md are standing research questions about competitors, scored against the friction rather than against a theme watch, with an explicit bar on frictions being promoted into theme watches. No new research layer and no new source type, so a friction changing in About Us needs no edit here.*
