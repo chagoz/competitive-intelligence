@@ -54,7 +54,7 @@ If the run covers more than one month's worth of time because a run was missed, 
 
 ### Step 2, research, Layer 2, all tiers
 
-**The all-tier rule, §7.** Refresh the Layer 2 section on every competitor profile, every tier, not just Tier 1. Tier 1 keeps its full treatment on top. Lower tiers get, at minimum, a re-scan of their Layer 2 section against the source types in `evidence-registry.md` with the recency filter, plus a light glance at their orientation section.
+**The all-tier rule, §7.** Refresh the Layer 2 section on every competitor profile, every tier, not just Tier 1. Tier 1 keeps its full treatment on top. Lower tiers get, at minimum, a re-scan of their Layer 2 section against the source types in `evidence-registry.md` with the recency filter, plus a light glance at their orientation section. Verification runs on every tier; whether a Tier 2 to 4 movement is reported as a finding uses the eventfulness bar (`analysis-rules.md` §1, set in `configuration.md`). Tier 1 movements always report.
 
 Source types by priority order: Critical every cycle without exception, High unless time-constrained, Medium on a full pass. The quarterly types, positioning descriptor, review-site category, public company register, analyst coverage and supplier-facing surface, are checked on their own cadence rather than monthly.
 
@@ -257,7 +257,8 @@ Command: `python3 monthly_check.py page.md --teams "[team names]" --sections "[s
 
 ---
 
-*v5*
+*v6*
+*v6 changes: wire the eventfulness bar, a Tier 2 to 4 competitor's change is reportable only when it clears the bar in `configuration.md`, defined in `analysis-rules.md` §1.*
 *v5 changes: title-lookup recovery, a configured title that finds no exact match stops and names the field and the searched value, matching configuration.md.*
 *v4 changes: §10 sufficiency check added before the gate, covering search execution, Fill the gate, Weight and the monthly-only Trend condition. The former data-sufficiency gate renamed to the sufficiency trend condition, pointing to §10.*
 *v3 changes: the research pass writes profiles through the write plan at its end, before the gate and without waiting for it. Bets reading is top tier by default and extendable by user setting. The lost-deal pull runs only when a lost-deal source is connected. Gotchas and the check script replace the do-not list.*

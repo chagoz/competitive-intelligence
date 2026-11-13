@@ -62,7 +62,7 @@ Run the numbered questions in `watch-list.md`, "How to use this in the weekly di
 
 ### Step 4, company scan
 
-Scan Tier 1 always, even if quiet. Scan Tier 2 to 4 only if genuinely eventful, per the gate-keeper rule in `analysis-rules.md` §1.
+Scan Tier 1 always, even if quiet. Scan Tier 2 to 4 only on a change that clears the eventfulness bar, defined in `analysis-rules.md` §1 and set in `configuration.md` (default material). Name the level used.
 
 The company scan answers what each competitor did about the topics from Step 3. It does not set the agenda by itself.
 
@@ -278,7 +278,8 @@ Command, page: `python3 digest_check.py payload page.md --teams "[team names]" -
 
 ---
 
-*v6*
+*v7*
+*v7 changes: wire the eventfulness bar, a Tier 2 to 4 competitor's change is reportable only when it clears the bar in `configuration.md`, defined in `analysis-rules.md` §1.*
 *v6 changes: the write run opens with one block carrying the confirmed three and the writing-layer versions line, per eval-set S4.1. The versions statement moves from a before-drafting rule in Step 2 to part of the run's first output in Step 1.*
 *v5 changes: title-lookup recovery, a configured title that finds no exact match stops and names the field and the searched value, matching configuration.md.*
 *v4 changes: §10 sufficiency check added before the gate, covering search execution, Fill the gate and Weight.*

@@ -84,6 +84,19 @@
 
 ---
 
+## Settings
+
+*Method knobs with sensible defaults. Change a value here, never in a skill. The eventfulness bar is defined in `analysis-rules.md` §1.*
+
+**Eventfulness bar (Tier 2 to 4 inclusion):** material
+*What pulls a non-Tier-1 competitor into an output, and what counts as a reportable movement for one. One of:*
+- *any: any dated, observable change. Highest volume, most noise.*
+- *material (default): a shipped or withdrawn feature, a pricing or packaging change, funding or M&A, a named customer win or loss, a leadership change, or a regulatory action. Each dated and sourced.*
+- *threat: only changes that move the competitor's threat score or directly target our buyers. Lowest volume.*
+*A claim with no observable change behind it never qualifies, at any setting. Tier 1 is never gated, always included.*
+
+---
+
 ## Scheduled tasks
 
 | Task | Cadence | Notes |

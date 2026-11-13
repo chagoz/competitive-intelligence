@@ -10,7 +10,7 @@ formatting, the emoji system and the mandatory inline markers, which all live in
 `language-guidelines.md` Part 1. Scoring, tier logic and source honesty rules live in
 `analysis-rules.md`.*
 
-*Created August 18, 2026 · v3*
+*Created August 18, 2026 · v4*
 
 ---
 
@@ -24,6 +24,8 @@ The research is mission-depth rather than a weekly scan, so a competitor-by-comp
 walk would repeat the same finding nine times.
 
 If only the first is true, it is still a weekly digest with a strong lead story.
+
+If the flash centers on a Tier 2 to 4 competitor, its trigger change must clear the eventfulness bar at the threat level (`analysis-rules.md` §1, set in `configuration.md`). Tier 1 needs no such clearance.
 
 ## Numbering
 
@@ -120,6 +122,7 @@ unreadable. Use dividers and bold paragraph titles for structure below H2.
 
 ---
 
-*v3*
+*v4*
+*v4: wire the eventfulness bar, a Tier 2 to 4 competitor's change is reportable only when it clears the bar in `configuration.md`, defined in `analysis-rules.md` §1.*
 *v2: strategy brief added as a standing section after reader feedback from Disa.*
 *v3: emoji headers specified per section, which they were not in v1 or v2, and inline markers written in as a mandatory list. The original omission is why the first edition improvised its own symbols.*
