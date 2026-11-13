@@ -229,6 +229,7 @@ Real failures from past runs. Each one looked reasonable at the time.
 - One blocked write is one blocked write. Report it, and let the remaining lines run.
 - A candidate that fails the recency test cannot be in the top three, however strong it looks.
 - A single mention in passing makes a company a profile, not a tier.
+- A louder namesake can own the search results for a tracked name. Carry the identifier in the query, and tie each finding to the domain or registration number before it is used (§2.2.2).
 
 ## Check script
 

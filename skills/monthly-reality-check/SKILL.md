@@ -221,6 +221,7 @@ Real failures from past runs. Each one looked reasonable at the time.
 - A lost-deal pull with no connected source is a line that says so, never a blank table.
 - Profiles written before the gate are safe only through the write plan: one blocked line never holds the rest.
 - A chip does not replace a sentence. A bare chip line tells the reader nothing.
+- A louder namesake can own the search results for a tracked name. Carry the identifier in the query, and tie each finding to the domain or registration number before it is used (§2.2.2).
 
 ## Check script
 

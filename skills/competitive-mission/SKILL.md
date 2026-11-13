@@ -107,6 +107,7 @@ Apply language-guidelines.md Part 1 regardless of structure: source honesty, rec
 - Never fabricate the company's own side of a comparison. Flag the gap instead.
 - Public user voice has a ceiling. Say what that ceiling is.
 - A mission that skips the write plan loses what it learned, and the next run starts again from nothing.
+- A louder namesake can own the search results for a tracked name. Carry the identifier in the query, and tie each finding to the domain or registration number before it is used (§2.2.2).
 
 ---
 

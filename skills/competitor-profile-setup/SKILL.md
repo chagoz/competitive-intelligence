@@ -99,6 +99,7 @@ Open the write step by restating the confirmed tier and the confirmed employee l
 - A wrong tier persists with its rationale attached, so restate the tier at the gate before anything is written.
 - An employee who cannot be verified without a manual browse is pending manual validation, never guessed.
 - A bet missing one of its three tags is excluded, and recorded as excluded.
+- A louder namesake can own the search results for a tracked name. Carry the identifier in the query, and tie each finding to the domain or registration number before it is used (§2.2.2).
 
 ---
 
