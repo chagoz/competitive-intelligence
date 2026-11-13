@@ -6,7 +6,7 @@
 
 ## September 2026, the big rework
 
-Triggered by an external Product Vision brief asking questions the system's rulebook didn't yet have language for. Used as an audit rather than answered directly: what does the system already cover, how well, and what has to change. The audit found 23 problems. Fixing them reworked 14 reference documents, 6 skill files, all 25 competitor profiles, and 2 Notion databases plus a schema fix on a third.
+Triggered by an external Product Vision brief asking questions the system's rulebook didn't yet have language for. Used as an audit rather than answered directly: what does the system already cover, how well, and what has to change. The audit found 23 problems. Fixing them reworked 14 reference documents, 6 skill files, every competitor profile, and 2 Notion databases plus a schema fix on a third.
 
 **The headline isn't the 23 findings, it's that giving existing evidence a shape produced 12 findings the system couldn't previously state, from research already done.** Almost none of it came from new searching.
 
@@ -15,7 +15,7 @@ Triggered by an external Product Vision brief asking questions the system's rule
 - **Corporate events** (`analysis-rules.md` §2.5): funding, acquisition, partnership, integration, senior hire, ownership change, plus positioning as a seventh type. Exempt from the recency filter, since old commitments are still legitimate standing evidence.
 - **The market lens** (§2.6): a monthly reading pass over already-collected evidence, not a new scan. Two blocks that never merge, our theme watches versus observed-in-the-market, with an explicit no-promotion rule.
 - **The positioning block**: tracks the press-release lede descriptor against the standing boilerplate as two fields that move at different speeds. The gap between them is the finding.
-- **Buyer archetypes, sourcing side** (`about-us.md`): five archetypes from 56 transcripts, 542 deals and 27 support conversations, with a stated evidence bias and public user voice tested and confirmed absent as a category fact, not a research gap.
+- **Buyer archetypes, sourcing side** (`about-us.md`): five archetypes drawn from customer transcripts, deal records and support conversations, with a stated evidence bias and public user voice tested and confirmed absent as a category fact, not a research gap.
 - **The bets pillar** (§2.8): three mandatory tags per competitor bet, evidence class, conviction, distance from our own stated direction. A bet missing any tag is excluded, not shown partial.
 - **The absence bar** (§2.2.1): bounded claims need one authoritative path, unbounded claims need two independent ones. A guessed URL returning 404 proves the guess was wrong, not that the thing is absent.
 - **The friction rule** (§2.9): a competitor move that removes a documented buyer friction raises the same single threat score a theme watch would, rather than creating a second, parallel number.

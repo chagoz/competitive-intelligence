@@ -86,7 +86,7 @@ The audit found twenty-three problems. Fixing them turned into a rework of every
 
 **Waiting on evidence:** investment-side archetypes, and a contradiction on whether one competitor offers supplier self-registration, where two sources disagree.
 
-**Unblocked and mechanical:** per-company registry fetching for roughly twelve companies across two source types, plus review-site category everywhere and the Nordic public registers.
+**Unblocked and mechanical:** per-company registry fetching across two source types, plus review-site category everywhere and the relevant national public registers.
 
 ⚠️ **The honest caveat**
 Every skill was rewritten twice across two days and **none has been executed**. The first real run is the first real test, and some of what was written will turn out wrong in practice. Treat it as supervised.

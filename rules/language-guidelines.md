@@ -279,8 +279,8 @@ When findings consolidate around one topic with direct business consequences, th
 
 The reader is Product, Sales, or C-level. The goal is to nurture a decision, not hand one down. No imperative verbs opening an item (Investigate, Decide, Confirm, Publish). Open with what was observed, let the implication sit there rather than stating the conclusion for the reader.
 
-Bad: "Investigate the Lindab and AXA feedback as a product signal, not a messaging problem."
-Good: "Two buyers, two deals, the same doubt. Lindab and AXA independently raised versions of the same concern this quarter, one on effort reduction, one on methodology reliability, both claims we lead with."
+Bad: "Investigate the feedback from those two accounts as a product signal, not a messaging problem."
+Good: "Two buyers, two deals, the same doubt. Both independently raised versions of the same concern this quarter, one on effort reduction, one on methodology reliability, both claims we lead with."
 
 ### Structure, reversed from the Digest
 
