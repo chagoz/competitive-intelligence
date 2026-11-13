@@ -25,7 +25,7 @@ If the earlier conversation is gone, run a fresh research pass and say so in the
 Read from Project knowledge:
 
 - `about-us.md`, the lens every competitor gets judged through: the theme watch list, the Product direction the bets pillar measures against, and the buyer archetypes whose documented frictions are standing research questions
-- `analysis-rules.md`: §1 tier criteria and the gate-keeper rule, §2 research schema, §2.1 the recency filter, §2.2.1 the absence bar, §2.5 corporate events, §2.8 the bets pillar, §2.9 archetype frictions, §5 employee list rules
+- `analysis-rules.md`: §1 tier criteria and the gate-keeper rule, §2 research schema, §2.1 the recency filter, §2.2.1 the absence bar, §2.2.2 name collisions, §2.5 corporate events, §2.8 the bets pillar, §2.9 archetype frictions, §5 employee list rules
 - `competitor-profile-template.md`, the shape the profile takes
 - `evidence-registry.md` for the source types to look for and their priorities
 - `configuration.md` for the Competitor Profiles database, the Evidence Registry database and the Competitor Employee List database
@@ -99,6 +99,7 @@ Open the write step by restating the confirmed tier and the confirmed employee l
 - A wrong tier persists with its rationale attached, so restate the tier at the gate before anything is written.
 - An employee who cannot be verified without a manual browse is pending manual validation, never guessed.
 - A bet missing one of its three tags is excluded, and recorded as excluded.
+- A louder namesake can own the search results for a tracked name. Carry the identifier in the query, and tie each finding to the domain or registration number before it is used (§2.2.2).
 
 ---
 

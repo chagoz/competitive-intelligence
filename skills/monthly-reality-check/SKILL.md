@@ -31,7 +31,7 @@ Route before reading anything else.
 ### Read first, research lens only
 
 - `about-us.md`, read first. It owns the theme watch list the matrix is built from, our regulation coverage status, the loss patterns that shape how a finding is read, the Product direction the bets pillar measures against, and the buyer archetypes whose documented frictions are standing research questions
-- `analysis-rules.md`: §2 research schema, §2.1 recency filter and the window, §2.2 source honesty, §2.2.1 the absence bar, §2.5 corporate events, §2.6 the market lens, §2.8 the bets pillar, §2.9 archetype frictions, §7 the all-tier rule, §8 lost deal method, §9 the always-true rule
+- `analysis-rules.md`: §2 research schema, §2.1 recency filter and the window, §2.2 source honesty, §2.2.1 the absence bar, §2.2.2 name collisions, §2.5 corporate events, §2.6 the market lens, §2.8 the bets pillar, §2.9 archetype frictions, §7 the all-tier rule, §8 lost deal method, §9 the always-true rule
 - `evidence-registry.md` for source types, priorities and cadences. **Addresses are not in this file.** They live in the Evidence Registry database
 - `watch-list.md`, for the topic questions
 - `configuration.md` for the Competitor Profiles database, the Evidence Registry database, the Competitor Employee List database, the Slack channel and the CRM lost-deal field names
@@ -221,6 +221,7 @@ Real failures from past runs. Each one looked reasonable at the time.
 - A lost-deal pull with no connected source is a line that says so, never a blank table.
 - Profiles written before the gate are safe only through the write plan: one blocked line never holds the rest.
 - A chip does not replace a sentence. A bare chip line tells the reader nothing.
+- A louder namesake can own the search results for a tracked name. Carry the identifier in the query, and tie each finding to the domain or registration number before it is used (§2.2.2).
 
 ## Check script
 

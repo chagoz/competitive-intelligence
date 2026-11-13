@@ -114,6 +114,18 @@ Inferred, our own read, explicitly stated as opinion
 
 **Category-level absence beats company-level absence.** Where a source type turns out not to cover the category at all, record that once with its evidence rather than as an absence row per company. The alternative generates work forever and implies a listing we have no reason to expect.
 
+### 2.2.2 Name collisions, the wrong company
+
+**A perfectly sourced finding about the wrong company is still wrong.** Source honesty asks who said it. This asks who it is about, and nothing downstream catches the mistake: the citation is real, the quote is real, the company is not ours.
+
+**Some tracked names collide with a louder namesake**, a near-identical spelling belonging to a larger company in another market, or a common word that returns unrelated businesses. An unqualified search returns the namesake, and the finding arrives clean, cited and about the wrong entity.
+
+**The identifier goes in the query, not only in the record.** Where a name is ambiguous, every query for that company carries its unique identifier, a domain or a registration number, per the Search condition in §10. `competitor-list.md` owns which names collide and what each one's identifier is. This rule owns what the run does about it.
+
+**Verify before scoring, not after.** A finding on a colliding name is tied to the identifier before it reaches a sheet: the domain on the page, or the registration number on the record. A result that cannot be tied to the identifier is recorded as `🟠 Reported` with the ambiguity named, never `✅ Confirmed`.
+
+**A name variant is the same company.** Where a company appears under more than one spelling, the variants resolve to the existing profile rather than opening a second one. The competitor list records the variant so a later run does not re-open it.
+
 ### 2.3 Talk vs implement verdict
 
 Talk, positioning, visibility, advisory, announcement with nothing shipped
@@ -499,7 +511,8 @@ A failed condition is traced to its cause before it is reported, in this order:
 
 ---
 
-*v1.16*
+*v1.17*
+*v1.17 changes: §2.2.2 added, name collisions. A tracked name that collides with a louder namesake returns a clean, cited finding about the wrong company, so the identifier now belongs in the query and every finding on an ambiguous name is tied to a domain or registration number before it is scored. Which names collide stays with `competitor-list.md`; this section owns what the run does about it.*
 *v1.16 changes: the live path now requires a fetchable source, and a row recording an absence never counts toward one. §10.5 added, the low-communication competitor rules: off-site-first sourcing, a recorded fetchable mirror where the official source is blocked, the job board as a standing source, a provisional detection date where the only dated item is an aggregator refresh, and fallback Reported tagging under §2.2.1 where nothing dated is reachable, plus the undated-index dateline rule. The Evidence Registry row of the input map gains the fetchable-and-dated test, No padding gains the absence and fetchability clauses, and fetchability joins the hypotheses. The per-run evidence paragraphs are removed from §10.6: the method carries rules and open questions, and run evidence lives with the run, not in the rulebook.*
 *v1.15 changes: §10 added, the sufficiency conditions (Search, Fill the gate, Weight, and a monthly-only Trend), the diagnosis order, the input map, and the skip-cost and no-padding rules. The former data-sufficiency gate name is retired and folded into §10 as the Trend condition. The Evidence Registry is a critical Search input for the digest; at a profile setup it is produced, not required.*
 *v1.13 changes: §1 gate-keeper gains the qualifying-loss definition, with a user-set recency window defaulting to 12 months. §2.1 gains a time window for every watch-list item, and the regulation source rule. §3 lets unscored items be selected into the final three. §6, §7 and §9 move profile updates to a write plan at the end of the research pass, without a gate. §8 makes the deals-lost line conditional on a lost-deal source.*
