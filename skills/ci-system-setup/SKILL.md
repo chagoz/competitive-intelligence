@@ -132,7 +132,7 @@ If an old page or database with a similar name already exists: leave it exactly 
 
 ### Phase 2 output
 
-A short status table: item, found or created, type, any old or stray item flagged for awareness but left untouched. Plus the list of values the human needs to add to `configuration.md`. Nothing else.
+A short status table: item, found or created, type, any old or stray item flagged for awareness but left untouched. Then the required handoff: record each item's exact title in `configuration.md` now, before running any other skill. The skills find each resource by that title, so an unrecorded or mistyped title makes the resource unfindable at runtime. This is a step the user must complete, not an optional note.
 
 ### Gotchas, Phase 2
 
@@ -147,6 +147,7 @@ A short status table: item, found or created, type, any old or stray item flagge
 Does not run on a schedule. Does not guess at content to save time. Does not touch existing Notion items it was not asked to build. Does not write competitor data, digest content, or any row-level information. That boundary is what keeps this skill safe to re-run.
 ---
 
-*v4*
+*v5*
+*v5 changes: Phase 2 output now ends with a required handoff, record each item's exact title in configuration.md before any other skill runs, since skills find resources by that title. configuration.md gains a title-lookup recovery rule and an example value per field.*
 *v4 changes: §10 sufficiency setup check added at the end of Phase 1, inputs only, disclosing thin inputs with their cost.*
 *v3 changes: route-first added, stating how the phase is chosen and what a lost conversation does. The two do-not lists are replaced by gotchas. The never section is kept, since it states the hard boundary.*
