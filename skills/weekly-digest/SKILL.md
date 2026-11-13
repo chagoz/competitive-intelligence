@@ -129,7 +129,7 @@ Present the sheet and wait.
 **The gate closes on one condition only: the skill has restated exactly three items, and the operator has agreed to that restatement.** Nothing else counts as confirmation.
 
 - **Partial agreement** ("the first two are good"): still at the gate. Restate the full three with the settled two fixed and the third named as open, then ask the single question that resolves it.
-- **Modification** ("swap the third for Sedex"): apply it, restate the resulting three, and treat a plain yes as confirmation. Do not return to research, and do not treat a modification as a rejection.
+- **Modification** ("swap the third for Groundline"): apply it, restate the resulting three, and treat a plain yes as confirmation. Do not return to research, and do not treat a modification as a rejection.
 - **Silence or an unrelated reply**: still at the gate. Do not proceed.
 - **Anything unclear**: still at the gate. Ask. Never read ambiguity as confirmation, and never resolve it in the direction that lets the run continue.
 

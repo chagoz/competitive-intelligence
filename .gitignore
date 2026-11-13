@@ -1,0 +1,3 @@
+
+# Private pre-release denylist, never committed
+.release-denylist

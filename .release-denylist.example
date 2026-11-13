@@ -1,0 +1,11 @@
+# Terms that must never appear in this public repo.
+# One per line, matched case-insensitively. Lines starting with # are ignored.
+#
+# Copy this file to .release-denylist (gitignored) and replace the placeholders
+# with your own: the company running the system, its people, its customers and
+# deals, and the competitors you actually track. Every company shown in this
+# repo is invented, and this check is what keeps it that way.
+your-company-name
+a-colleague-name
+a-customer-or-deal-name
+a-competitor-you-actually-track

@@ -1,6 +1,6 @@
 ---
 name: competitive-mission
-description: "Open-scope ad hoc competitive research for a specific question that doesn't fit the weekly or monthly cadence, e.g. 'research EcoVadis for the Tudor RFI' or 'what did competitors do with AI in H1'. Produces a standalone Notion page, structure determined by the mission's own needs. Always ad hoc, on demand, never scheduled."
+description: "Open-scope ad hoc competitive research for a specific question that doesn't fit the weekly or monthly cadence, e.g. 'research Groundline for a customer RFI' or 'what did competitors do with AI in H1'. Produces a standalone Notion page, structure determined by the mission's own needs. Always ad hoc, on demand, never scheduled."
 ---
 
 # Competitive Mission
