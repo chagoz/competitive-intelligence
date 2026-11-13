@@ -38,7 +38,7 @@ Route before reading anything else.
 
 **Do not read the writing files in this phase.** `monthly-review-template.md` and `language-guidelines.md` Part 3 are read in Phase 2, next to the work they govern.
 
-**If a configuration value is missing, unconfirmed, or does not match the workspace:** search Notion by the name given in the file, show what you found, and ask the operator to confirm before writing anything. **Do not attempt to write to `configuration.md`.** Report the delta and ask the operator to update it by hand.
+**If a configuration value is missing, unconfirmed, or does not match the workspace:** search Notion by the name given in the file, show what you found, and ask the operator to confirm before writing anything. If the search returns nothing, stop and name the field in `configuration.md` and the exact title you searched for, rather than running thin on a missing resource. **Do not attempt to write to `configuration.md`.** Report the delta and ask the operator to update it by hand.
 
 If any edit fails with "can't edit page on block with an archived ancestor," stop and flag it. Do not silently write elsewhere. This usually means the database title matched more than one page and the wrong one got confirmed.
 
@@ -257,6 +257,7 @@ Command: `python3 monthly_check.py page.md --teams "[team names]" --sections "[s
 
 ---
 
-*v4*
+*v5*
+*v5 changes: title-lookup recovery, a configured title that finds nothing stops and names the field and the searched value, matching configuration.md.*
 *v4 changes: §10 sufficiency check added before the gate, covering search execution, Fill the gate, Weight and the monthly-only Trend condition. The former data-sufficiency gate renamed to the sufficiency trend condition, pointing to §10.*
 *v3 changes: the research pass writes profiles through the write plan at its end, before the gate and without waiting for it. Bets reading is top tier by default and extendable by user setting. The lost-deal pull runs only when a lost-deal source is connected. Gotchas and the check script replace the do-not list.*

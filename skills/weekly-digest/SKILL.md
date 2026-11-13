@@ -36,7 +36,7 @@ Route before reading anything else. The routing is the same in every skill: conf
 
 **Do not read the writing files in this phase.** They are read in Phase 2, next to the work they govern. A writing rule read hours before it is applied is a rule that gets dropped.
 
-**If a configuration value is missing, unconfirmed, or does not match the workspace:** search Notion by the name given in the file, show what you found, and ask the operator to confirm before proceeding. **Do not attempt to write to `configuration.md`.** Report the delta and ask the operator to update it by hand. Never fetch a Notion page by a remembered ID.
+**If a configuration value is missing, unconfirmed, or does not match the workspace:** search Notion by the name given in the file, show what you found, and ask the operator to confirm before proceeding. If the search returns nothing, stop and name the field in `configuration.md` and the exact title you searched for, rather than running thin on a missing resource. **Do not attempt to write to `configuration.md`.** Report the delta and ask the operator to update it by hand. Never fetch a Notion page by a remembered ID.
 
 ### Step 1, set the window
 
@@ -276,6 +276,7 @@ Command, page: `python3 digest_check.py payload page.md --teams "[team names]" -
 
 ---
 
-*v4*
+*v5*
+*v5 changes: title-lookup recovery, a configured title that finds nothing stops and names the field and the searched value, matching configuration.md.*
 *v4 changes: §10 sufficiency check added before the gate, covering search execution, Fill the gate and Weight.*
 *v3 changes: profile writes move to the write plan at the end of the research pass, without a gate. Route-first is stated in every skill. A fresh research pass replaces rebuilding the sheet from profiles. Gotchas and the check script replace the do-not list. The What's for us line is optional and off by default.*
