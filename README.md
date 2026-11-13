@@ -8,7 +8,7 @@ Version history: [`CHANGELOG.md`](CHANGELOG.md). The reasoning behind the bigges
 
 *Demo with fictional data. Groundline and every company shown are invented; the EU regulation cited is real. [Watch the full walkthrough, 1:53 (MP4)](docs/media/groundline-long.mp4).*
 
-**Keeping it that way.** Before publishing a fork, run `scripts/check-release.sh`. It fails the release if any term in your private `.release-denylist` appears in a tracked file: your company, your people, your customers and deals, and the competitors you actually track. The denylist is gitignored on purpose, since committing it would publish exactly what it protects. Start from `.release-denylist.example`.
+**Keeping it that way.** Before publishing a fork, run `scripts/check-release.sh`. It fails the release if any term in your private `.release-denylist` appears in a tracked file: your company, your people, your customers and deals, and the competitors you actually track. The denylist is gitignored on purpose, since committing it would publish exactly what it protects. Start from `.release-denylist.example`. The full rule, and what must never be committed, is in [`CONTRIBUTING.md`](CONTRIBUTING.md).
 
 ## Repo structure
 
