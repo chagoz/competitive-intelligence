@@ -30,7 +30,7 @@ Read from Project knowledge:
 - `evidence-registry.md` for the source types to look for and their priorities
 - `configuration.md` for the Competitor Profiles database, the Evidence Registry database and the Competitor Employee List database
 
-**If a configuration value is missing, unconfirmed, or does not match the workspace:** search Notion by the name given in the file, show what you found, and ask the operator to confirm before writing. If the search returns nothing, stop and name the field in `configuration.md` and the exact title you searched for, rather than running thin on a missing resource.
+**If a configuration value is missing, unconfirmed, or does not match the workspace:** search Notion by the name given in the file, show what you found, and ask the operator to confirm before writing. If no result is an exact match for the title, stop and name the field in `configuration.md` and the exact title you searched for, rather than running thin on a missing resource.
 
 **Do not attempt to write to `configuration.md`.** Project knowledge is read-only at runtime. Report the delta and ask the operator to update it. **No skill configures itself.**
 
@@ -104,6 +104,6 @@ Open the write step by restating the confirmed tier and the confirmed employee l
 ---
 
 *v5*
-*v5 changes: title-lookup recovery, a configured title that finds nothing stops and names the field and the searched value, matching configuration.md.*
+*v5 changes: title-lookup recovery, a configured title that finds no exact match stops and names the field and the searched value, matching configuration.md.*
 *v4 changes: §10 sufficiency check added before the tier gate, with the profile conditions Search, Fill the gate and Weight.*
 *v3 changes: route-first added. The gate-keeper rule now names the qualifying-loss definition in analysis-rules.md §1, with the recency window as a user setting, default 12 months. The do-not list is replaced by gotchas.*
