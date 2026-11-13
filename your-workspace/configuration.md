@@ -91,9 +91,9 @@
 **Eventfulness bar (Tier 2 to 4 inclusion):** material
 *What pulls a non-Tier-1 competitor into an output, and what counts as a reportable movement for one. One of:*
 - *any: any dated, observable change. Highest volume, most noise.*
-- *material (default): a shipped or withdrawn feature, a pricing or packaging change, funding or M&A, a named customer win or loss, a leadership change, or a regulatory action. Each dated and sourced.*
-- *threat: only changes that move the competitor's threat score or directly target our buyers. Lowest volume.*
-*A claim with no observable change behind it never qualifies, at any setting. Tier 1 is never gated, always included.*
+- *material (default): a dated, sourced corporate event per §2.5 (funding, acquisition, partnership, integration, senior hire, ownership change, positioning change), a shipped or announced product feature, a pricing or packaging change, a named customer win or loss, or a regulatory action.*
+- *threat: a strict subset of material that also moves the threat score or targets our buyers. Lowest volume.*
+*A claim with no observable change behind it never qualifies, at any setting. Tier 1 is never gated, always included. The bar gates competitor-attributed sections (Competitor pulse, Three things, profile changelog); the topic passes (This week in AI, Regulation watch) and the Follow-up tracker are not gated by it.*
 
 ---
 

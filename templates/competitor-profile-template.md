@@ -68,7 +68,7 @@ Section order, each header carrying its emoji from the Part 1 table. **Reality c
 
 **Decision callouts.** A decision that waits on a human (a tier move, a threat change, a baseline revision) appears as a callout just below the changelog. Open: red background, 🚩 icon, title and text as one block, three lines at most. Closed: grey background, ✅ icon, with the closing line "✅ Closed [date]: [decision]. [Decider]'s decision." A closed callout stays one cycle, then moves to the Working record.
 
-**Changelog.** Opens with a one-line grey italic scan-context note. Then the top 3 things that moved this cycle, each a title-pair led by its date (date, then what changed, then why). If nothing moved, carry the previous 3 forward. If important new things came in, those replace the weakest. Close with a grey italic baseline note (no new signal / threat unchanged) if applicable. This section tells a reader what is current, so it carries the most weight. For a Tier 2 to 4 profile, a change counts as moved only if it clears the eventfulness bar (`analysis-rules.md` §1, set in `configuration.md`); Tier 1 logs movement regardless.
+**Changelog.** Opens with a one-line grey italic scan-context note. Then the top 3 things that moved this cycle, each a title-pair led by its date (date, then what changed, then why). If nothing moved, carry the previous 3 forward. If important new things came in, those replace the weakest. Close with a grey italic baseline note (no new signal / threat unchanged) if applicable. This section tells a reader what is current, so it carries the most weight. For a Tier 2 to 4 profile, a new change counts as moved only if it clears the eventfulness bar (`analysis-rules.md` §1, set in `configuration.md`); a continued or escalating move already being tracked is not re-gated, and Tier 1 logs movement regardless.
 
 **Reality check.** Each gap is an H3, with a blank line between H3s so it scans. Four elements under each header, in this order, and nothing else:
 
@@ -206,7 +206,8 @@ Threat scores are **not** restated in the page body. The database property and i
 
 ---
 
-*v9*
+*v10*
+*v10 changes: a continued or escalating tracked move is not re-gated by the eventfulness bar.*
 *v9 changes: wire the eventfulness bar, a Tier 2 to 4 competitor's change is reportable only when it clears the bar in `configuration.md`, defined in `analysis-rules.md` §1.*
 *v8 changes: reality check gains one thesis line per gap, in option C form. Decision callouts added, red when open and grey when closed. Bets reading added as an optional section, top tier by default and extendable by user setting, using the tags in analysis-rules.md §2.8. Signal history moves to a Working record toggle. The At a glance brief and the reader model are not yet in this template and are logged for later.*
 *v7 changes: the medium form gains the changelog as a standing section, numbered 0 so the existing section numbers do not shift. It was already present on live medium-form profiles and absent from the template, which is the wrong way round for a rule.*
