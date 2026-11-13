@@ -61,7 +61,7 @@ Read from Project knowledge, scoped to what the mission needs rather than all of
 
 For whatever competitors the mission touches, read their Competitor Profiles entries rather than re-researching from scratch. Anything new learned is one line in the write plan, per section 9, run at the end of the research pass. That applies to a mission exactly as it applies to a scheduled run.
 
-**Do not attempt to write to configuration.md.** Report the delta and ask the operator to update it. **No skill configures itself.**
+**If a title in `configuration.md` finds nothing when searched, stop and name the field and the exact title you searched for, rather than running thin on a missing resource. Do not attempt to write to configuration.md.** Report the delta and ask the operator to update it. **No skill configures itself.**
 
 ---
 
@@ -111,5 +111,6 @@ Apply language-guidelines.md Part 1 regardless of structure: source honesty, rec
 
 ---
 
-*v3*
+*v4*
+*v4 changes: title-lookup recovery, a configured title that finds nothing stops and names the field and the searched value, matching configuration.md.*
 *v3 changes: route-first added. Profile write-back moves to the write plan at the end of the research pass. The do-not list is replaced by gotchas.*

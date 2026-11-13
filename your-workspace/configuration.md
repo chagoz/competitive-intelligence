@@ -2,7 +2,7 @@
 
 *Workspace-specific values every skill reads before running. Confirmed once per Notion connection, then read, never re-searched. No page IDs recorded here on purpose, titles only, so the system stays portable across Notion workspaces.*
 
-*Nothing here gets written by a skill. Project knowledge is read-only at runtime, so a skill that finds a mismatch reports the delta and asks you to update this file by hand. That's deliberate: a configuration change is always visible to a person, never silent.*
+*Nothing here gets written by a skill. Project knowledge is read-only at runtime, so a skill that finds a mismatch reports the delta and asks you to update this file by hand, and a skill that searches for a title here and finds nothing stops and names the field to set and the value it searched for, rather than running thin on a missing resource. That's deliberate: a configuration change is always visible to a person, never silent.*
 
 ---
 
@@ -20,28 +20,30 @@
 
 ## Notion
 
-**Competitive Intelligence home page (title to search):**
+*Fill each title below with the exact name of the page or database you created in Phase 2. The skills find each one by searching this title, so it must match what is in Notion, character for character. An example value follows each field.*
+
+**Competitive Intelligence home page (title to search):** *e.g., Competitive Intelligence*
 **Type:** Markdown page
 **Status:** unconfirmed
 
-**Competitor Profiles database (title to search):**
+**Competitor Profiles database (title to search):** *e.g., Competitor Profiles*
 **Type:** Database
 **Status:** unconfirmed
 
-**Competitor Employee List database (title to search):**
+**Competitor Employee List database (title to search):** *e.g., Competitor Employee List*
 **Type:** Database
 **Status:** unconfirmed
 
-**Digest Impact Tracker database (title to search):**
+**Digest Impact Tracker database (title to search):** *e.g., Digest Impact Tracker*
 **Type:** Database
 **Status:** unconfirmed
 *If you want to track what a digest caused, not just whether it was read, you'll also want a Digest Actions database, a relation between the two. See the setup skill for the full shape of both, it's worth building even though it's more schema than the minimum.*
 
-**Digest Actions database (title to search, optional but recommended):**
+**Digest Actions database (title to search, optional but recommended):** *e.g., Digest Actions*
 **Type:** Database
 **Status:** unconfirmed
 
-**Evidence Registry database (title to search):**
+**Evidence Registry database (title to search):** *e.g., Evidence Registry*
 **Type:** Database
 **Status:** unconfirmed
 *Live-maintained by the skills, not a static file. `templates/evidence-registry.md` defines the source types, this database holds the actual addresses.*
