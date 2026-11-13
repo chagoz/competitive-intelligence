@@ -63,7 +63,7 @@ Bold thesis line, then prose. Then the source block: quote block, grey italic, c
 
 **Why it sits here.** After the company learnings and before the opportunities, because an opportunity should be able to draw on both.
 
-**If nothing moved.** One grey line saying so. Do not pad it to reach three. A genuinely quiet category is a finding.
+**If nothing moved.** One grey line saying so. Do not pad it to reach three. A genuinely quiet category is a finding. For a Tier 2 to 4 competitor, moved means a change that clears the eventfulness bar (`analysis-rules.md` §1, set in `configuration.md`); a claim with no observable change behind it does not count. Tier 1 always appears.
 
 ---
 
@@ -147,6 +147,7 @@ Everything in the `language-guidelines.md` Part 1 checklist, plus:
 
 ---
 
-*v1.1*
+*v1.2*
+*v1.2 changes: wire the eventfulness bar, a Tier 2 to 4 competitor's change is reportable only when it clears the bar in `configuration.md`, defined in `analysis-rules.md` §1.*
 *v1.1 changes: header stamp removed, this file carried a "Created" date at the top and a full version stamp in the footer, identified during the September rework review as the same drift the one-stamp rule exists to prevent.*
 *v1: first written definition. The review had existed as a Notion page since August 2026 with no mirror in Project knowledge, and the Theme Watch matrix had no definition anywhere at all, existing only as produced output inside a working record. Drafted against the real August 2026 edition rather than from scratch, so the shape that already worked is preserved. Two sections are genuinely new: the market lens, and the working record as a toggle rather than a sibling page.*

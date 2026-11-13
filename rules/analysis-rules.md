@@ -29,6 +29,13 @@ A company named once is a profile, not a tier. It triggers a profile setup under
 
 **Tier 5, the platforms the category sits on.** Systems buyers already run that our category either sits on top of or gets absorbed into. Not a dedicated tool, and not necessarily a competitor. The question per entry is where their offer intersects ours, and whether the intersection is growing. Recorded as a market signal and read into the market lens (§2.6), never scored on the threat axis, because a platform is not making a move against us.
 
+**Genuinely eventful, the Tier 2 to 4 inclusion bar.** Tier 1 is always included, eventful or not. A Tier 2 to 4 competitor enters an output for the window only on a dated, observable change that clears the eventfulness bar. A restated claim, a cosmetic rebrand with no strategic shift, or mere presence in search with no observable change behind it never clears it, at any setting. The bar is one operator setting, the eventfulness bar in `configuration.md`, default material:
+- **any:** any dated, observable change. Highest volume, most noise.
+- **material (default):** a dated, sourced instance of any corporate event in §2.5 (funding, acquisition, partnership, integration, senior hire, ownership change, a substantive positioning change), a shipped or announced product feature, a pricing or packaging change, a named customer win or loss, or a regulatory action.
+- **threat:** a strict subset of material, a material event that directly targets our buyers or raises the competitor's standing profile threat score to High (4 or 5). A single run scoring one event high does not by itself make it threat-level. Lowest volume. The levels nest: any contains material contains threat.
+
+This one bar governs competitor-attributed inclusion and movement: the weekly scan, Competitor pulse and Three things, the monthly review, the profile changelog, and a flash edition. It does not gate the topic passes (This week in AI, Regulation watch) or the Follow-up tracker, which keep their own noise floors, so a cross-cutting topic finding or a tracked move is never silently dropped by the bar. A skill reads the level from `configuration.md` and names the level it used.
+
 **AI-native flag (cross-cutting).** A company can be AI-native and any tier. Criteria: AI is the primary differentiator (not a feature), targets buyers wanting to reduce human involvement, no established methodology credibility comparable to Tier 1.
 
 **Escalation rule:** Any Tier 2/4/AI-native company named in a prospect conversation triggers a human gate review before tier change.
@@ -511,7 +518,10 @@ A failed condition is traced to its cause before it is reported, in this order:
 
 ---
 
-*v1.17*
+*v1.20*
+*v1.20 changes: clarify material's positioning change as substantive, not a cosmetic rebrand; anchor threat to targeting our buyers or a High standing profile threat score, not a single run's score.*
+*v1.19 changes: re-anchor material to the §2.5 corporate-event taxonomy so partnerships, positioning changes and announced features count; make threat a strict subset of material so the levels nest; scope the bar to competitor-attributed sections, leaving the topic passes and the Follow-up tracker on their own noise floors.*
+*v1.18 changes: define genuinely eventful as the Tier 2 to 4 inclusion bar, a three-level operator setting in `configuration.md` (any / material / threat, default material), governing inclusion and movement everywhere a non-Tier-1 change is reported.*
 *v1.17 changes: §2.2.2 added, name collisions. A tracked name that collides with a louder namesake returns a clean, cited finding about the wrong company, so the identifier now belongs in the query and every finding on an ambiguous name is tied to a domain or registration number before it is scored. Which names collide stays with `competitor-list.md`; this section owns what the run does about it.*
 *v1.16 changes: the live path now requires a fetchable source, and a row recording an absence never counts toward one. §10.5 added, the low-communication competitor rules: off-site-first sourcing, a recorded fetchable mirror where the official source is blocked, the job board as a standing source, a provisional detection date where the only dated item is an aggregator refresh, and fallback Reported tagging under §2.2.1 where nothing dated is reachable, plus the undated-index dateline rule. The Evidence Registry row of the input map gains the fetchable-and-dated test, No padding gains the absence and fetchability clauses, and fetchability joins the hypotheses. The per-run evidence paragraphs are removed from §10.6: the method carries rules and open questions, and run evidence lives with the run, not in the rulebook.*
 *v1.15 changes: §10 added, the sufficiency conditions (Search, Fill the gate, Weight, and a monthly-only Trend), the diagnosis order, the input map, and the skip-cost and no-padding rules. The former data-sufficiency gate name is retired and folded into §10 as the Trend condition. The Evidence Registry is a critical Search input for the digest; at a profile setup it is produced, not required.*

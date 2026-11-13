@@ -31,6 +31,8 @@ Seasonal editions add 🌲 to the opening subtitle rather than replacing a secti
 
 **Section 2 is exactly three items and is called Three things to remember.** Not two, not four, and not renamed. If a quiet week genuinely yields only two, that is a signal about the week worth stating in the subtitle, not a reason to change the section.
 
+**Tier 2 to 4 reaches these sections only when eventful.** A non-Tier-1 competitor appears in Competitor pulse or Three things only on a change that clears the eventfulness bar (`analysis-rules.md` §1, set in `configuration.md`). Tier 1 appears regardless.
+
 **Section 4 is called Regulation watch.** Not Legislation watch. One name, so it is findable across editions.
 
 ## Inline markers, mandatory
@@ -62,6 +64,7 @@ If findings consolidate around one topic with direct business consequences, this
 
 ---
 
-*v3*
+*v4*
+*v4 changes: wire the eventfulness bar, a Tier 2 to 4 competitor's change is reportable only when it clears the bar in `configuration.md`, defined in `analysis-rules.md` §1.*
 *v3 changes: added a note on where Topic 3 and 4 findings land, since `watch-list.md` grew to four topics after this document was last touched and only two of them had a named section. "Reality Check output" corrected to "the monthly page," the older document type this file hadn't caught up to. Header stamp removed, this file carried both a header and a footer stamp, the exact drift the one-stamp rule was written to stop.*
 *v2 changes: emoji headers specified per section, which they previously were not in this document. Inline markers written in as mandatory. Section names fixed to one canonical form each after digest #9 drifted on two of them.*
