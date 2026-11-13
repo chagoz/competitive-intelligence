@@ -8,6 +8,8 @@ Version history: [`CHANGELOG.md`](CHANGELOG.md). The reasoning behind the bigges
 
 *Demo with fictional data. Groundline and every company shown are invented; the EU regulation cited is real. [Watch the full walkthrough, 1:53 (MP4)](docs/media/groundline-long.mp4).*
 
+**Keeping it that way.** Before publishing a fork, run `scripts/check-release.sh`. It fails the release if any term in your private `.release-denylist` appears in a tracked file: your company, your people, your customers and deals, and the competitors you actually track. The denylist is gitignored on purpose, since committing it would publish exactly what it protects. Start from `.release-denylist.example`.
+
 ## Repo structure
 
 Four layers, each answering a different question:
@@ -18,6 +20,7 @@ Four layers, each answering a different question:
 | `rules/` | How does the system decide what matters? | No, reusable methodology |
 | `templates/` | What shape does each output take? | No, reusable methodology |
 | `docs/` | How do I set this up, and what does each skill do? | No, reference material |
+| `scripts/` | How do I check nothing private leaked before I publish? | No, tooling |
 | `skills/` | What are the actual Claude Skills? | No, install as-is |
 
 ### `your-workspace/`

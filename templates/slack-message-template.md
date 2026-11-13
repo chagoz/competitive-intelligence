@@ -24,9 +24,9 @@ The title, three-point structure, and link are always identical in shape. The cl
 
 Each bullet = what they did + what it means for us, in one sentence. Second part maximum four words.
 
-Good: "IntegrityNext claimed our AI positioning. They published first. We haven't."
-Good: "EcoVadis is now a data layer, not just a rating. Different game entirely."
-Bad: "EcoVadis published new methodology documentation this week." (fact only, no implication, this is what drives low engagement)
+Good: "Groundline claimed our AI positioning. They published first. We haven't."
+Good: "Groundline is now a data layer, not just a rating. Different game entirely."
+Bad: "Groundline published new methodology documentation this week." (fact only, no implication, this is what drives low engagement)
 
 ## Closing line, contextual, not formulaic
 
