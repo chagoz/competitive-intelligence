@@ -413,7 +413,7 @@ Why this matters: dated findings that live only in a digest or a mission page go
 **1. Search.** The run knows what to scan and where.
 - At setup, the digest passes when: at least 3 watch topics each state why, what to scan for, and a noise floor, the activity level below which the topic's movement is not treated as a signal; at least 3 Tier 1 companies have a name plus a unique identifier, such as a domain, wherever the name could be mistaken for another; the tracked set holds at least 8 companies across at least 3 tiers, not counting Tier 5 defaults that are not companies; and every Tier 1 company has at least one source in the Evidence Registry.
 - At setup, the profile passes when: the company has a name plus a unique identifier.
-- Before the gate, the run also passes search execution: every Tier 1 company and every topic returned at least one result about it, of any date; every query used the identifier; and every Tier 1 company has a live path, meaning a registry source with at least one dated item in the last 90 days.
+- Before the gate, the run also passes search execution: every Tier 1 company and every topic returned at least one result about it, of any date; every query used the identifier; and every Tier 1 company has a live path, meaning a **fetchable** registry source with at least one dated item in the last 90 days. A source that cannot be retrieved, because it is robots-blocked or repeatedly errors, does not carry a live path on its own, and a row that records an absence carries none at all.
 
 **2. Fill the gate.** The human has a real choice.
 - Digest passes when: at least 4 candidates survive the recency gate (§2.1).
@@ -443,7 +443,7 @@ A failed condition is traced to its cause before it is reported, in this order:
 | Input | Owned by | Profile | Digest | Condition fed | Rank | Passes when |
 |---|---|---|---|---|---|---|
 | Tier 1 names with unique identifiers | competitor-list, Competitor Profiles | | ✓ | Search | Critical | At least 3, each with a domain or qualifier where the name is ambiguous |
-| Evidence Registry sources | Evidence Registry | | ✓ | Search | Critical | At least one source per Tier 1 company, with an address |
+| Evidence Registry sources | Evidence Registry | | ✓ | Search | Critical | At least one source per Tier 1 company, with an address, and at least one of them fetchable and carrying a dated item in the last 90 days |
 | Watch topics, with what to scan for | watch-list | | ✓ | Search, Fill | Critical | At least 3, each with why, what to scan for and a noise floor |
 | Theme watches | about-us | ✓ | ✓ | Weight | Critical | At least 5, each a dimension a competitor move can strike |
 | Competitor name and identifier | profile request | ✓ | | Search | Critical | Name plus domain or qualifier |
@@ -472,21 +472,35 @@ A failed condition is traced to its cause before it is reported, in this order:
 
 **A skip carries its cost.** Every skipped input is stated with the condition it weakens and the run it affects, from this map. A skip is never shown without that line.
 
-**No padding.** A condition is never met by lowering quality. Candidates that failed recency do not count toward Fill the gate, and a score with no named anchor does not count toward Weight.
+**No padding.** A condition is never met by lowering quality. Candidates that failed recency do not count toward Fill the gate, and a score with no named anchor does not count toward Weight. An Evidence Registry row that records an absence is a finding, not a source, and never counts toward a live path. A source that cannot be fetched does not count toward one either.
 
-### 10.5 Hypotheses under review
+### 10.5 Low-communication competitors
+
+*Some competitors publish almost nothing dated. A registry built only from their own site and a static register record carries no live path at all, and the run cannot tell silence from blindness. These rules apply at setup, so a silent competitor is never mistaken for a quiet one.*
+
+1. **Off-site-first.** Where a Tier 1 has no dated first-party surface, at least one off-site dated surface is registered before Search is declared set: the national job board, a register-announcement feed, a register-data aggregator, or third-party coverage.
+2. **Fetchability.** A dated source that is robots-blocked or repeatedly errors does not satisfy the live path alone. Every blocked or repeatedly erroring official source is paired with a fetchable mirror, and the mirror is recorded in the registry as the retrieval route.
+3. **The job board is a standing source.** Each Tier 1 carries its national job-board or careers employer page. Hiring is dated when it exists, and the kind of hiring, sales against engineering, is evidence for the AI topic rather than only a vacancy feed.
+4. **Provisional detection date.** Where the only in-window dated item is an aggregator refresh rather than a self-published event, the live path is tagged provisional. Weight reads it as lower-confidence standing evidence, never as a dated move.
+5. **Fallback tagging.** Where no fetchable dated surface is reachable at all, the competitor's result is tagged `🟠 Reported` under the absence bar in §2.2.1, naming the paths tried, and surfaced as a named finding. Silence is reported, never inferred as quiet.
+
+**An undated index is not an undated company.** Where a newsroom or blog lists items without dates, open each item for its own dateline before deciding in or out of window. The dateline on the item is an event date and is preferred over any detection date. This is not confined to small vendors, the largest names do it too.
+
+*Name collisions are a related but separate problem, owned by the competitor list and its identifiers, not by this section.*
+
+### 10.6 Hypotheses under review
 
 *Every threshold and rank here is a starting design. Each run's test log records which conditions passed or failed, and which cause a failure traced to. Review after five runs.*
 
 - **Thresholds:** 3 watch topics, 3 Tier 1 companies, 8 tracked companies across 3 tiers, 4 candidates at the gate, a 90-day live path.
 - **Ranks:** whether each Critical input is truly needed, and whether anything Important should be Critical. Open question: what a 5-minute setup can afford to lose.
 - **Hypothesis anchors:** whether an adopted, unevidenced anchor should count toward Weight.
-
-**Evidence so far, 10 October 2026.** Two real companies over four windows. On Float, Fill the gate failed in every window, at 0 to 3 candidates. On a mature setup, the setup check passed. A blind run without the Evidence Registry found 0 candidates where the archived digest found 4. That is the case that put the registry on the critical list.
+- **Fetchability:** whether an unfetchable dated source should fail the live path outright, as it does now, or count at a discount. Also whether an aggregator refresh is a strong enough dated item to carry a live path on its own, given it is a detection date and not an event date, and whether a source dated only to the month satisfies a 90-day window at its boundary.
 
 ---
 
-*v1.15*
+*v1.16*
+*v1.16 changes: the live path now requires a fetchable source, and a row recording an absence never counts toward one. §10.5 added, the low-communication competitor rules: off-site-first sourcing, a recorded fetchable mirror where the official source is blocked, the job board as a standing source, a provisional detection date where the only dated item is an aggregator refresh, and fallback Reported tagging under §2.2.1 where nothing dated is reachable, plus the undated-index dateline rule. The Evidence Registry row of the input map gains the fetchable-and-dated test, No padding gains the absence and fetchability clauses, and fetchability joins the hypotheses. The per-run evidence paragraphs are removed from §10.6: the method carries rules and open questions, and run evidence lives with the run, not in the rulebook.*
 *v1.15 changes: §10 added, the sufficiency conditions (Search, Fill the gate, Weight, and a monthly-only Trend), the diagnosis order, the input map, and the skip-cost and no-padding rules. The former data-sufficiency gate name is retired and folded into §10 as the Trend condition. The Evidence Registry is a critical Search input for the digest; at a profile setup it is produced, not required.*
 *v1.13 changes: §1 gate-keeper gains the qualifying-loss definition, with a user-set recency window defaulting to 12 months. §2.1 gains a time window for every watch-list item, and the regulation source rule. §3 lets unscored items be selected into the final three. §6, §7 and §9 move profile updates to a write plan at the end of the research pass, without a gate. §8 makes the deals-lost line conditional on a lost-deal source.*
 *v1.12 changes: the friction rule in §2.9 corrected. A friction raises the single Axis 2 threat score rather than producing a parallel one, because any output that ranks candidates mechanically needs one number to sort on and two would make the ranking editorial by accident. Matching scoring trigger added to §3. Header version stamp removed, per the single-stamp rule now in README.*
